@@ -1,0 +1,36 @@
+
+@media only screen  and (max-width:576px){
+    .desctopcatalog{
+        display: none;
+    }
+
+}
+@media only screen  and (min-width:576px){
+    .desctopcatalog{
+        display: block;
+    }
+
+    .mobilecatalog{
+        display: none;
+    }
+}
+@media only screen  and (min-width:767px){
+    .mobilecatalog{
+        display: none;
+    }
+}
+@media only screen  and (min-width:991px){
+    .mobilecatalog{
+        display: none;
+    }
+}
+@media only screen  and (min-width:1200px){
+    .mobilecatalog{
+        display: none;
+    }
+}
+@media only screen  and (min-width:1400px){
+    .mobilecatalog{
+        display: none;
+    }
+}

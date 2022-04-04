@@ -1,0 +1,511 @@
+
+@media only screen  and (min-width:576px){
+    .lg_pr_element{
+       
+        width:230px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+        height: 230px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+        
+    }
+    .lg_pr_element_body{
+        padding: 5px;
+        transition: all 0.3s ease;
+    }
+    .lg_pr_element_body.animate:hover{
+        transform: scale(1.01);
+        box-shadow: 0px 0px 15px 15px rgb(241, 240, 240);
+    }
+    .lg_pr_element_date_rating{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start
+    }
+    .lg_pr_element_date{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+        opacity: 0.5;
+    }
+    .lg_pr_element_date_rating img{
+        width: 13px;
+        height: 13px;
+    }
+    .lg_pr_element_img{
+        margin-top:5px;
+        margin-bottom:5px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .lg_pr_element_img img{
+        width: 160px;
+        height: 160px;
+    }
+
+    .lg_pr_element_brand{
+        position: absolute;
+        bottom: -40%;
+        left: 25%;
+        z-index: -10;
+    }
+
+    .lg_pr_element_brand > img{
+        width: 110px;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+
+    .lg_pr_element_like_price{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end
+    }
+    .lg_pr_element_like{
+        cursor: pointer;
+        z-index: 1;
+    }
+    .lg_pr_element_price{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .lg_pr_element_price_current{
+        margin-left: 17px;/*mmmmmmmmmmmmmmmmmmmmmmmmm*/
+        font-family: 'Open Sans',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        color: #000000;
+    }
+    .lg_pr_element_price_current.color{
+        color: #AC3121;
+    }
+    .lg_pr_element_price_discount{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 19px;
+        color: #9EAFC2;
+        opacity: 0.8;
+        text-decoration-line: line-through;
+    }
+    .lg_pr_element_price_discount.noshow{
+        display: none;
+    }
+}
+
+@media only screen  and (min-width:767px){
+    .lg_pr_element{
+       
+        width:250px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+        height: 250px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+        
+    }
+    .lg_pr_element_body{
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+    .lg_pr_element_body.animate:hover{
+        transform: scale(1.01);
+        box-shadow: 0px 0px 15px 15px rgb(241, 240, 240);
+    }
+    .lg_pr_element_date_rating{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start
+    }
+    .lg_pr_element_date{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        color: #000000;
+        opacity: 0.5;
+    }
+    .lg_pr_element_img{
+        margin-top: 10px;
+        margin-bottom:10px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .lg_pr_element_img img{
+        width: 160px;
+        height: 160px;
+    }
+
+    .lg_pr_element_brand{
+        position: absolute;
+        bottom: -40%;
+        left: 25%;
+        z-index: -10;
+    }
+
+    .lg_pr_element_brand > img{
+        width: 80px;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+
+    .lg_pr_element_like_price{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end
+    }
+    .lg_pr_element_like{
+        cursor: pointer;
+        z-index: 1;
+    }
+    .lg_pr_element_like img{
+        width: 20px;
+        height: 20px;
+    }
+    .lg_pr_element_price{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .lg_pr_element_price_current{
+        margin-left: 17px;/*mmmmmmmmmmmmmmmmmmmmmmmmm*/
+        font-family: 'Open Sans',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
+        color: #000000;
+    }
+    .lg_pr_element_price_current.color{
+        color: #AC3121;
+    }
+    .lg_pr_element_price_discount{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+        color: #9EAFC2;
+        opacity: 0.8;
+        text-decoration-line: line-through;
+    }
+    .lg_pr_element_price_discount.noshow{
+        display: none;
+    }
+}
+
+@media only screen  and (min-width:991px){
+    .lg_pr_element{
+       
+        width: 300px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+        height: 300px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+        
+    }
+    .lg_pr_element_body{
+        padding: 25px;
+        transition: all 0.3s ease;
+    }
+    .lg_pr_element_body.animate:hover{
+        transform: scale(1.01);
+        box-shadow: 0px 0px 15px 15px rgb(241, 240, 240);
+    }
+    .lg_pr_element_date_rating{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start
+    }
+    .lg_pr_element_date{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        opacity: 0.5;
+    }
+    .lg_pr_element_img{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .lg_pr_element_img img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .lg_pr_element_brand{
+        position: absolute;
+        bottom: -40%;
+        left: 25%;
+        z-index: -10;
+    }
+
+    .lg_pr_element_brand > img{
+        width: 130px;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+
+    .lg_pr_element_like_price{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end
+    }
+    .lg_pr_element_like{
+        cursor: pointer;
+        z-index: 1;
+    }
+    .lg_pr_element_price{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .lg_pr_element_price_current{
+        margin-left: 22px;/*mmmmmmmmmmmmmmmmmmmmmmmmm*/
+        font-family: 'Open Sans',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+    }
+    .lg_pr_element_price_current.color{
+        color: #AC3121;
+    }
+    .lg_pr_element_price_discount{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #9EAFC2;
+        opacity: 0.8;
+        text-decoration-line: line-through;
+    }
+    .lg_pr_element_price_discount.noshow{
+        display: none;
+    }
+}
+
+@media only screen  and (min-width:1200px){
+    .lg_pr_element{
+       
+        width: 350px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+        height: 350px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+        background-color: #fff;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+    .lg_pr_element_body{
+        transition: all 0.3s ease;  
+        padding: 25px;
+    }
+    .lg_pr_element_body.animate:hover{
+        transform: scale(1.01);
+        box-shadow: 0px 0px 15px 15px rgb(241, 240, 240);
+    }
+    
+    .lg_pr_element_date_rating{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start
+    }
+    .lg_pr_element_date{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        opacity: 0.5;
+    }
+    .lg_pr_element_img{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .lg_pr_element_img img{
+        width: 240px;
+        height: 240px;
+    }
+
+    .lg_pr_element_brand{
+        position: absolute;
+        bottom: -40%;
+        left: 25%;
+        z-index: -10;
+    }
+
+    .lg_pr_element_brand > img{
+        width: 150px;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+
+    .lg_pr_element_like_price{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end
+    }
+    .lg_pr_element_like{
+        cursor: pointer;
+        z-index: 1;
+    }
+    .lg_pr_element_price{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .lg_pr_element_price_current{
+        margin-left: 22px;/*mmmmmmmmmmmmmmmmmmmmmmmmm*/
+        font-family: 'Open Sans',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+    }
+    .lg_pr_element_price_current.color{
+        color: #AC3121;
+    }
+    .lg_pr_element_price_discount{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #9EAFC2;
+        opacity: 0.8;
+        text-decoration-line: line-through;
+    }
+    .lg_pr_element_price_discount.noshow{
+        display: none;
+    }
+}
+@media only screen  and (min-width:1400px){
+    .lg_pr_element{
+       
+        width: 430px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+        height: 430px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+        
+    }
+    .lg_pr_element_body{
+        padding: 35px;
+        transition: all 0.3s ease;
+    }
+    .lg_pr_element_body.animate:hover{
+        transform: scale(1.01);
+        box-shadow: 0px 0px 15px 15px rgb(241, 240, 240);
+    }
+    .lg_pr_element_date_rating{
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start
+    }
+    .lg_pr_element_date{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        opacity: 0.5;
+    }
+    .lg_pr_element_img{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .lg_pr_element_img img{
+        width: 280px;
+        height: 280px;
+    }
+
+    .lg_pr_element_brand{
+        position: absolute;
+        bottom: -40%;
+        left: 25%;
+        z-index: -10;
+    }
+
+    .lg_pr_element_brand > img{
+        width: 150px;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+
+    .lg_pr_element_like_price{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end
+    }
+    .lg_pr_element_like{
+        cursor: pointer;
+        z-index: 1;
+    }
+    .lg_pr_element_price{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .lg_pr_element_price_current{
+        margin-left: 22px;/*mmmmmmmmmmmmmmmmmmmmmmmmm*/
+        font-family: 'Open Sans',sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+    }
+    .lg_pr_element_price_current.color{
+        color: #AC3121;
+    }
+    .lg_pr_element_price_discount{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #9EAFC2;
+        opacity: 0.8;
+        text-decoration-line: line-through;
+    }
+    .lg_pr_element_price_discount.noshow{
+        display: none;
+    }
+    .lg_pr_line{
+        margin-top: 50px;/*mmmmmmmmmmmmmm*/
+        transition: all 0.5s ease;
+        height: 3px;
+        background-color:#ECEFF3;
+        display: flex;
+    }
+    .lg_pr_line_item{
+        cursor:pointer;
+        transition: all 0.5s ease;
+        width: 100%;
+    }
+    .lg_pr_line_item.active{
+        background-color:#020F59;
+    }
+    
+}

@@ -1,0 +1,187 @@
+
+@media only screen  and (max-width:576px){
+    /* .sm_pr_item gaa chaqirilayotgan joyga beriladi*/
+
+    .sm_pr_element{
+        margin: 10px;
+        width: 155px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+        height: 280px;/*  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+    }
+    
+    .sm_pr_element_date_rating_like{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 22px;
+        margin-bottom: 20px;/*mmmmmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbb*/
+        margin-right: 12px;
+        margin-left: 10px;
+    }
+
+    .sm_pr_element_date{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        opacity: 0.5;
+    }
+    .sm_pr_element_date_rating img{
+        width: 14px;
+        height: 14px;
+    }
+    .sm_pr_element_like img{
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .sm_pr_element_img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        position: relative;
+    }
+    .sm_pr_element_img > img{
+        object-fit: contain;
+        width: 120px;
+        height: 120px;
+    }
+    .sm_pr_element_brand{
+        position: absolute;
+        bottom: -10%;
+        left: 25%;
+        z-index: -2;
+    }
+    .sm_pr_element_brand > img{
+        width: 70px;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+    .sm_pr_element_price{
+        margin-right: 12px;
+        margin-left: 12px;
+        margin-top: 20px;/*mmmmmmmmmmmmmttttttttttttttttt*/
+        margin-bottom: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sm_pr_element_price_current{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .sm_pr_element_price_current.color{
+        color: #AC3121;
+    }
+    .sm_pr_element_price_discount{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+        text-decoration-line: line-through;
+        color: #9EAFC2;
+        opacity: 0.5;
+    }
+    .sm_pr_element_price_discount.noshow{
+        display: none;
+    }
+}
+
+@media only screen  and (min-width:576px){
+    /* .sm_pr_item gaa chaqirilayotgan joyga beriladi*/
+
+    .sm_pr_element{
+        margin: 10px;
+        width: 155px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+        height: 280px;/*  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+    }
+    
+    .sm_pr_element_date_rating_like{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 22px;
+        margin-bottom: 20px;/*mmmmmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbb*/
+        margin-right: 12px;
+        margin-left: 10px;
+    }
+
+    .sm_pr_element_date{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        opacity: 0.5;
+    }
+    .sm_pr_element_date_rating img{
+        width: 14px;
+        height: 14px;
+    }
+    .sm_pr_element_like img{
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .sm_pr_element_img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        position: relative;
+    }
+    .sm_pr_element_img > img{
+        object-fit: contain;
+        width: 120px;
+        height: 120px;
+    }
+    .sm_pr_element_brand{
+        position: absolute;
+        bottom: -10%;
+        left: 25%;
+        z-index: -2;
+    }
+    .sm_pr_element_brand > img{
+        width: 70px;
+        object-fit: contain;
+        opacity: 0.5;
+    }
+    .sm_pr_element_price{
+        margin-right: 12px;
+        margin-left: 12px;
+        margin-top: 20px;/*mmmmmmmmmmmmmttttttttttttttttt*/
+        margin-bottom: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sm_pr_element_price_current{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .sm_pr_element_price_current.color{
+        color: #AC3121;
+    }
+    .sm_pr_element_price_discount{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+        text-decoration-line: line-through;
+        color: #9EAFC2;
+        opacity: 0.5;
+    }
+    .sm_pr_element_price_discount.noshow{
+        display: none;
+    }
+}
+

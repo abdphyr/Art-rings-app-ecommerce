@@ -1,0 +1,35 @@
+
+@media only screen and (max-width:576px){
+    .desctop_product_detail{
+        display: none;
+    }
+}
+@media only screen and (min-width:576px){
+    .desctop_product_detail{
+        display: none;
+    }
+}
+@media only screen and (min-width:767px){
+    .mobile_product_detail{
+        display: none;
+    }
+    .desctop_product_detail{
+        display: block;
+    }
+}
+
+@media only screen and (min-width:991px){
+    .mobile_product_detail{
+        display: none;
+    }
+}
+@media only screen and (min-width:1200px){
+    .mobile_product_detail{
+        display: none;
+    }
+}
+@media only screen and (min-width:1400px){
+    .mobile_product_detail{
+        display: none;
+    }
+}

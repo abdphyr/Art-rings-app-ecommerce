@@ -1,0 +1,346 @@
+
+@media only screen and (max-width:576px){
+    
+    .mob_ctg_info_title{
+        margin-bottom: 10px;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+    .mob_ctg_info_description{
+        margin-bottom: 37px;
+        font-family: 'Open Sans';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+    }
+    .mob_ctg_sort_filter{
+        display: flex;
+        align-items: center;
+    }
+    .mob_ctg_sort_btn{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    .mob_ctg_sort_btn img{
+        width: 25px;
+        height: 15px;
+        margin-right: 5px;
+    }
+    .des_sorting_icon svg{
+        margin-left: 7px;
+        padding-bottom: 1px;
+        height: 7px;
+        width: 12px;
+        transition: all 0.3s ease;
+    }
+    .des_sorting_icon.active svg{
+        transform: rotate(-180deg);
+    }
+    .mob_ctg_sort_title{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: #020F59;
+        
+    }
+    .mob_ctg_sort_body{
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    .mob_ctg_sort_items{
+        height: 0;
+        transition: all 0.3s ease;
+        transform: translateY(-100%);
+    }
+    .mob_ctg_sort_items.active{
+        /* transition: all 0.3s ease; */
+        height: 100%;
+        transform: translateY(0);
+    }
+    .mob_ctg_sort_item{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgb(236,239,243);
+        cursor: pointer;
+        user-select: none;
+    }
+    .mob_ctg_sort_item_title{
+        margin-left: 30px;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: #000;
+    }
+
+
+
+
+    /*FILTER SECTION */
+    .mobile_filter_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    .filter_show_products{
+        margin-top: 45px;
+        margin-bottom: 112px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #020F59;
+        user-select:none;
+        cursor:pointer;
+    }
+    .filter_show_products div{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #fff;
+    }
+
+    /*filter qismni ochish uchun button*/
+    .mob_ctg_filter_btn{
+        display: flex;
+        align-items: center;
+        width: 20%;
+        margin-right: 5px;
+        cursor: pointer;
+        user-select: none;
+    }
+    .mob_ctg_filter_btn img{
+        margin-right: 5px;
+    }
+    /*Filter qismi*/
+    .mob_ctg_filter_section{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        transform: translateX(-100%);
+        overflow: scroll;
+    }
+    .mob_ctg_filter_section.active{
+        transform: translateX(0);
+    }
+    .mob_ctg_filter_top{/* Top navigation*/
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .mob_ctg_filter_top_icon img{
+        cursor: pointer;
+        user-select: none;
+        width: 30px;
+        height: 30px;
+    }
+    .mob_ctg_filter_top_title{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 25px;
+        color:#000;
+    }
+    .mob_ctg_filter_top_clear{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 25px;
+        color: #020F59;
+        cursor: pointer;
+        user-select:none;
+    }
+    /*uchta filter qismi ichida kontenti bilan birgalikda */
+    .mob_ctg_filter_item{
+        width: 100%;
+        margin-bottom: 2px;
+        background: #F8F9FD;
+        overflow: hidden;
+    }
+    /* filter contentini ochish uchun button*/
+    .mob_ctg_filter_header{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        user-select: none;
+    }
+    .mob_ctg_filter_header svg{
+        transition: all 0.3s ease;
+    }
+    .mob_ctg_filter_header.active svg{
+        transform: rotate(-180deg);
+    }
+    .mob_ctg_filter_header_title{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color:#000;
+    }
+    /*Price_Insert__tag filter elementlari*/
+    .mob_ctg_filter_body_items{
+        z-index: -1;
+        height: 0;
+        transition: all 0.3s ease;
+        transform: translateX(-150%);
+    }
+    .mob_ctg_filter_body_items.active{
+        transform: translateX(0);
+        height: 100%;
+    }
+    .mob_ctg_filter_body_item{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        background-color: #fff;
+        border-bottom: 1px solid rgb(236,239,243);
+        user-select:none;
+        cursor: pointer;
+    }
+    .mob_ctg_filter_body_title_icon{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .filter_body_title{
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000;
+    }
+    .filter_body_icon{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border:1px solid #020F59;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .filter_body_icon div{
+        transition: all 0.3s ease;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #020F59; 
+        opacity: 0;
+    }
+    .filter_body_icon .active{
+        opacity: 1;
+    }
+    /*tags qismi buttoni uchun*/
+    .filter_body_tag_icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border:1px solid #020F59;
+        user-select:none;
+        cursor:pointer;
+    }
+    .filter_body_tag_icon.active{
+        background-color: #020F59;
+    }
+    /*banner qoismi uchun*/
+    .mob_ctg_banner{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*catalog products*/
+    .mobile_catalog_products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .mobile_catalog_product{
+        width: 50%;
+    }
+    .mob_ctg_prs_pg{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 57px;
+    }
+    .mob_pagination_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mob_pagination_body{
+        display: flex;
+        align-items: center;
+        width: 75px;
+        overflow-x: hidden;
+    }
+    .mob_ctg_prs_pg_items{
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+    }
+    .mob_ctg_prs_pg_item,.mob_pagination_numbers{
+        transition: all 0.3s ease;
+        width: 25px;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+        opacity: 0.8;
+        user-select:none;
+        cursor:pointer;
+    }
+
+    .mob_ctg_prs_pg_item.active{
+        color:#020F59;
+    }
+    .mob_ctg_prs_pg_next svg,.mob_ctg_prs_pg_prev svg{
+        width: 10px;
+        height: 20px;
+        user-select:none;
+        cursor:pointer;
+    }
+    .mob_ctg_prs_pg_next.disallow,.mob_ctg_prs_pg_prev.disallow{
+        opacity: 0.5;
+    }
+    .catalog_info{
+        margin-bottom: 100px;/*mmmmmmmmmmmmmmmmmb*/
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 25px;
+        color: #000000;
+    }
+    .catalog_info_link{
+        font-weight: 600;
+        color: #020F59;
+    }
+}
+@media only screen and (min-width:576px){
+
+}

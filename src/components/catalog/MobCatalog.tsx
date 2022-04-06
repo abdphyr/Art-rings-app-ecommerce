@@ -5,11 +5,11 @@ import SmallProduct from '../../ui/product/SmallProduct';
 import { CtgPropsType } from './catalogTypes';
 import mobileBanner from '../../images/mobileBanner.png';
 import Pagination from '../../ui/pagination/Pagination';
-import MobFilter from './MobFilter';
-import MobSort from './MobSort';
-import CatalogInfo from './CatalogInfo';
-import MobFilterButton from './MobFilterButton';
-import MobSortButton from './MobSortButton';
+import MobFilter from './ui/MobFilter';
+import MobSort from './ui/MobSort';
+import CatalogInfo from './ui/CatalogInfo';
+import MobFilterButton from './ui/MobFilterButton';
+import MobSortButton from './ui/MobSortButton';
 
 const MobCatalog: React.FC<CtgPropsType> = (props) => {
 

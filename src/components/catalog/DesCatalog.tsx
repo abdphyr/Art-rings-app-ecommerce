@@ -5,13 +5,13 @@ import LargeProduct from '../../ui/product/LargeProduct';
 import { CtgPropsType } from './catalogTypes';
 import banner from '../../images/desctopVerticalBanner.png'
 import Pagination from '../../ui/pagination/Pagination';
-import ShowProduct from './ShowProduct';
-import DesSort from './DesSort';
-import Animation from './Animation';
-import DesFilterPrice from './DesFilterPrice';
-import DesFilterInsert from './DesFilterInsert';
-import DesFilterTag from './DesFilterTag';
-import CatalogInfo from './CatalogInfo';
+import ShowProduct from './ui/ShowProduct';
+import DesSort from './ui/DesSort';
+import Animation from './ui/Animation';
+import DesFilterPrice from './ui/DesFilterPrice';
+import DesFilterInsert from './ui/DesFilterInsert';
+import DesFilterTag from './ui//DesFilterTag';
+import CatalogInfo from './ui/CatalogInfo';
 
 const DesCatalog:React.FC<CtgPropsType> = (props) => {
 

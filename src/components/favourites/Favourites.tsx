@@ -1,13 +1,13 @@
 import React,{ useEffect, useState } from 'react';
 import './favourites.css';
-import Breadcrumb from '../breadcrumb/Breadcrumb';
+import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
 import { useLocation } from 'react-router-dom';
 import { FavouritesType } from './favouritesTypes';
-import LargeProduct from '../product/LargeProduct';
-import SmallProduct from '../product/SmallProduct';
+import LargeProduct from '../../ui/product/LargeProduct';
+import SmallProduct from '../../ui/product/SmallProduct';
 import banner from '../../images/desctopVerticalBanner.png';
 import mobileBanner from '../../images/mobileBanner.png';
-import Pagination from '../pagination/Pagination';
+import Pagination from '../../ui/pagination/Pagination';
 import { RootState } from '../../app/store';
 import { useSelector,useDispatch } from 'react-redux';
 import { clearFavourites } from '../../features/favouriteSlice';

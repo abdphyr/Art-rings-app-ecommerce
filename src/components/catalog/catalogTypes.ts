@@ -1,7 +1,5 @@
-
-import { ProductType } from "../product/productType";
+import { ProductType } from "../../ui/product/productType";
 import { Location } from "react-router-dom";
-
 
 export interface CtgPropsType {
     products: ProductType[];

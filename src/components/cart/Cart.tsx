@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './cart.css';
 import './applic.css';
-import Breadcrumb from '../breadcrumb/Breadcrumb';
+import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
 import { useLocation } from 'react-router-dom';
 import deleteCart from '../../images/deleteCart.svg';
 import brand from '../../images/mainlogo.png';

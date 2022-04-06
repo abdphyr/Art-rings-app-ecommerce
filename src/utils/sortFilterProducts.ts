@@ -1,4 +1,4 @@
-import { ProductType } from "../components/product/productType"
+import { ProductType } from "../ui/product/productType"
 
 interface Filter {
     byPrice: {

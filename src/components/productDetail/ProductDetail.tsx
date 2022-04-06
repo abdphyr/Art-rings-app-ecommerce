@@ -2,15 +2,15 @@ import { useState,useEffect } from 'react';
 import { useLocation,useParams } from 'react-router-dom';
 import './productdetail.css';
 import { ProductDetailTypes } from './productDetailTypes';
-import { ProductType } from '../product/productType';
-import Breadcrumb from '../breadcrumb/Breadcrumb';
+import { ProductType } from '../../ui/product/productType';
+import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
 import MobProductDetail from './MobProductDetail';
 import DesProductDetail from './DesProductDetail';
 import { useGetProductsQuery } from '../../services/productsApi';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
 import { GetCatalogDataType } from '../catalog/catalogTypes';
-import Loader from '../loading/Loading';
+import Loader from '../../ui/loading/Loading';
 
 const ProductDetail = () => {
     

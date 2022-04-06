@@ -14,7 +14,7 @@ const MobFilterTag: React.FC<MobFilterTagProps> = (props) => {
     const { filterTagsActive, setFilterTagsActive } = props
     const { filterTagOptions, filterTags, handleTag } = props
 
-    const handleSetInsert = (item: typeof filterTags[number]) => handleTag(item, filterTags)
+    const handleSetTag = (item: typeof filterTags[number]) => handleTag(item, filterTags);
     const handleFilterTagActive = () => setFilterTagsActive(!filterTagsActive)
 
     return (
@@ -33,7 +33,7 @@ const MobFilterTag: React.FC<MobFilterTagProps> = (props) => {
                     <div
                         key={item}
                         className='mob_ctg_filter_body_item'
-                        onClick={() => handleSetInsert(item)}
+                        onClick={() => handleSetTag(item)}
                     >
                         <div className="mob_ctg_filter_body_title_icon wrapper">
                             <div className="filter_body_title">{item}</div>

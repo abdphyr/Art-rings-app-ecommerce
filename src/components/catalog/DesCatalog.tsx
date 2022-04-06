@@ -1,10 +1,10 @@
 import './desctopcatalog.css';
 import React, { useState } from 'react';
-import Breadcrumb from '../breadcrumb/Breadcrumb';
-import LargeProduct from '../product/LargeProduct';
+import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
+import LargeProduct from '../../ui/product/LargeProduct';
 import { CtgPropsType } from './catalogTypes';
 import banner from '../../images/desctopVerticalBanner.png'
-import Pagination from '../pagination/Pagination';
+import Pagination from '../../ui/pagination/Pagination';
 import ShowProduct from './ShowProduct';
 import DesSort from './DesSort';
 import Animation from './Animation';
@@ -12,8 +12,6 @@ import DesFilterPrice from './DesFilterPrice';
 import DesFilterInsert from './DesFilterInsert';
 import DesFilterTag from './DesFilterTag';
 import CatalogInfo from './CatalogInfo';
-
-
 
 const DesCatalog:React.FC<CtgPropsType> = (props) => {
 
@@ -32,38 +30,30 @@ const DesCatalog:React.FC<CtgPropsType> = (props) => {
     const [showing, setShowing] = useState(false)
     const [tagsShowAll, setTagsShowALL] = useState(false)
 
-
     const limit: CtgPropsType['products'] = []
     Array(showNumber).fill(showNumber).forEach((_, i) => {
         limit.push(products[i])
     })
-
     const productsLength = products.length
-
     const showProductProps = {
         showing,setShowing,
         showNumber,setShowNumber,
         productsLength
     }
-
     const desSortProps = {
         viewSrtOpt, setViewSrtOpt,
         sortOptions, setSort ,sort
     }
-    
     const desFilterPriceProps= {
         filterPrice, handlePrice,filterPriceOptions
     }
-
     const desFilterInsertProps = {
         filterInsertOptions,filterInsert,handleInsert
     }
-
     const desFilterTagProps = {
         filterTagOptions,filterTags,handleTag,
         tagsShowAll,setTagsShowALL
     }
-
     return (
         <>
             <div className="wrapper">

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ProductType } from '../components/product/productType';
+import { ProductType } from '../ui/product/productType';
 
 export interface RecentlyType {
     product: ProductType;

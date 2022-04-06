@@ -26,6 +26,7 @@ const DesFilterPrice: React.FC<DesFilterPriceProps> = (props) => {
 
     const { filterPriceOptions } = props
     const { filterPrice, handlePrice } = props
+    const handleSetPrice = (item:typeof filterPrice) => handlePrice(item, filterPrice)
 
     return (
         <div className="des_ctg_tools_filter_price">
@@ -37,7 +38,7 @@ const DesFilterPrice: React.FC<DesFilterPriceProps> = (props) => {
                     <div
                         key={item.min}
                         className={(filterPrice.title === item.title && 'active') + (" des_ctg_tools_filter_item")}
-                        onClick={() => handlePrice(item, filterPrice)}
+                        onClick={() => handleSetPrice(item)}
                     >{item.title}
                     </div>
                 ))}

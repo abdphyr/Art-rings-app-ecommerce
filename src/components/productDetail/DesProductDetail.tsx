@@ -14,7 +14,7 @@ import brand from '../../images/mainlogo.png';
 import prevstrelka from '../../images/prevstrelka.svg';
 import nextstrelka from '../../images/nextstrelka.svg';
 import inputFile from '../../images/inputFile.svg';
-import ProductCarousel from '../carousel/ProductCarousel';
+import ProductCarousel from '../../ui/carousel/ProductCarousel';
 import { addItemCart } from '../../features/cartSlice';
 import { useDispatch } from 'react-redux';
 

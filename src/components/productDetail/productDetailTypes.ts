@@ -1,4 +1,4 @@
-import  { ProductType } from '../product/productType'
+import  { ProductType } from '../../ui/product/productType'
 import React from 'react';
 
 export interface ProductDetailTypes{

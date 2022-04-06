@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface MobFilterInsert {
+interface MobFilterInsertProps {
     filterInsertActive: boolean;
     setFilterInsertActive: React.Dispatch<React.SetStateAction<boolean>>;
     filterInsertOptions: string[];
@@ -8,12 +8,12 @@ interface MobFilterInsert {
     handleInsert: (item: string, filterInsert: string) => void;
 }
 
-const MobFilterInsert: React.FC<MobFilterInsert> = (props) => {
+const MobFilterInsert: React.FC<MobFilterInsertProps> = (props) => {
 
     const { filterInsertActive, setFilterInsertActive } = props
     const { filterInsertOptions, filterInsert, handleInsert } = props
 
-    const handleSetInsert = (item: typeof filterInsert) => handleInsert(item, filterInsert)
+    const handleSetInsert = (item: typeof filterInsert) => handleInsert(item, filterInsert);
     const handleFilterInsertActive = () => setFilterInsertActive(!filterInsertActive)
 
     return (

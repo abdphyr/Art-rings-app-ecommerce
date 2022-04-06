@@ -8,9 +8,10 @@ import { sortFilterData } from '../../utils/sortFilterProducts';
 import { RootState } from "../../app/store";
 import { useSelector } from "react-redux";
 import { useGetProductsQuery } from '../../services/productsApi';
-import Loader from '../loading/Loading';
+import Loader from '../../ui/loading/Loading';
+import { sortOptions, filterPriceOptions, filterInsertOptions, filterTagOptions, } from './Constants';
 
-const Catalog:React.FC = () => {
+const Catalog: React.FC = () => {
 
     const { category } = useParams()
     const location = useLocation()
@@ -29,39 +30,6 @@ const Catalog:React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-
-    const filterPriceOptions = [
-        { title: 'до 50 000', min: 0, max: 50000 },
-        { title: '50-70 000', min: 50000, max: 70000 },
-        { title: '70-100 000', min: 70000, max: 100000 },
-        { title: 'от 100 000', min: 100000, max: 100000000000000 },
-    ]
-
-    const filterInsertOptions = [
-        'с камнями',
-        'без камней',
-    ]
-
-    const filterTagOptions = [
-        "этно", "отпечатки", "бесконечность",
-        "однотонные", "эмаль", "подвижные",
-        "необычные", "широкие", "косичка",
-        "комбинированные", "узкие",
-        "растительный орнамент", "бриллианты",
-        "сапфиры"
-    ]
-
-    const sortOptions = [
-        'По умолчанию',
-        'Название (А - Я)',
-        'Название (Я - А)',
-        'Цена (низкая > высокая)',
-        'Цена (высокая > низкая)',
-        'Рейтинг (начиная с высокого)',
-        'Рейтинг (начиная с низкого)',
-        'Модель (А - Я)',
-        'Модель (Я - А)'
-    ]
 
     const [filterPrice, setFilterPrice] = useState<{ title: string, min: number, max: number }>({ title: '', min: 0, max: 0 })
     const [filterInsert, setFilterInsert] = useState('')

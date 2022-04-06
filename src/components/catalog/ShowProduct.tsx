@@ -9,9 +9,7 @@ interface ShowProductProps {
 }
 
 const ShowProduct: React.FC<ShowProductProps> = (props) => {
-    const { showing, setShowing,
-        showNumber, setShowNumber,
-        productsLength } = props
+    const { showing, setShowing, showNumber, setShowNumber, productsLength } = props
     return (
         <div className="des_ctg_tools_sort_showing">
             <div className='des_showing_title'>Показать:</div>

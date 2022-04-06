@@ -1,6 +1,4 @@
-
-@media only screen and (max-width:576px){
-    
+@media only screen and (max-width:576px){  
     .mob_ctg_info_title{
         margin-bottom: 10px;
         font-family: 'Open Sans',sans-serif;
@@ -315,7 +313,6 @@
         user-select:none;
         cursor:pointer;
     }
-
     .mob_ctg_prs_pg_item.active{
         color:#020F59;
     }
@@ -340,7 +337,4 @@
         font-weight: 600;
         color: #020F59;
     }
-}
-@media only screen and (min-width:576px){
-
 }

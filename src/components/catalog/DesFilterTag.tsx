@@ -9,9 +9,9 @@ interface DesFilterTagProps {
 }
 
 const DesFilterTag: React.FC<DesFilterTagProps> = (props) => {
-    
-    const { filterTagOptions, filterTags, handleTag, 
-        tagsShowAll, setTagsShowALL } = props
+
+    const { filterTagOptions, filterTags, handleTag, tagsShowAll, setTagsShowALL } = props
+    const handleSetTag = (item: typeof filterTags[number]) => handleTag(item, filterTags);
 
     return (
         <div className="des_ctg_tools_filter_tags">
@@ -22,7 +22,7 @@ const DesFilterTag: React.FC<DesFilterTagProps> = (props) => {
                 {filterTagOptions?.map((tag, i) => (
                     <div
                         key={i}
-                        onClick={() => handleTag(tag, filterTags)}
+                        onClick={() => handleSetTag(tag)}
                         className={(filterTags?.includes(tag) && 'active') + (" des_ctg_tools_filter_item")}>
                         {tag}
                     </div>
@@ -40,7 +40,7 @@ const DesFilterTag: React.FC<DesFilterTagProps> = (props) => {
                     {filterTagOptions?.map((tag, i) => (
                         <div
                             key={i}
-                            onClick={() => handleTag(tag, filterTags)}
+                            onClick={() => handleSetTag(tag)}
                             className={(filterTags?.includes(tag) && 'active') + (" des_ctg_tools_filter_item")}>
                             {tag}
                         </div>

@@ -10,7 +10,6 @@ interface MobFilterProps {
     setFilterPage: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-
 const MobFilter: React.FC<MobFilterProps> = (props) => {
 
     const { setFilterPage } = props
@@ -40,23 +39,19 @@ const MobFilter: React.FC<MobFilterProps> = (props) => {
         setFilterInsertActive(false)
         setFilterTagsActive(false)
     }
-
     const mobFilterPriceProps = {
         filterPriceActive, setFilterPriceActive,
         filterPriceOptions, filterPrice,
         handlePrice
     }
-
     const mobFilterInsertProps = {
         filterInsertActive, setFilterInsertActive,
         filterInsertOptions, filterInsert, handleInsert
     }
-
     const mobFilterTagProps = {
         filterTagsActive, setFilterTagsActive,
         filterTagOptions, filterTags, handleTag
     }
-
     return (
         <div className='mobile_filter_section'>
             <div>

@@ -7,7 +7,7 @@ import addCart from '../../images/addCart.svg';
 import WH from '../../images/WH.svg';
 import checkbox from '../../images/checkbox.svg';
 import brand from '../../images/mainlogo.png';
-import SmallProduct from '../product/SmallProduct';
+import SmallProduct from '../../ui/product/SmallProduct';
 import mobileBanner from '../../images/mobileBanner.png';
 import postImage from '../../images/postImage.svg';
 import { addItemCart } from '../../features/cartSlice';

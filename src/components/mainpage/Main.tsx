@@ -1,14 +1,14 @@
 import {useEffect, useState} from "react";
 import "./mainpage.css";
 import { Link} from "react-router-dom";
-import MainCarousel from "../carousel/MainCarousel";
+import MainCarousel from "../../ui/carousel/MainCarousel";
 import briliant from '../../images/diamond.svg';
 import katalog1 from '../../images/katalog1.png';
 import katalog2 from '../../images/katalog2.png';
 import katalog3 from '../../images/katalog3.png';
-import ProductCarousel from "../carousel/ProductCarousel";
-import SmallProduct from "../product/SmallProduct";
-import { ProductType } from "../product/productType";
+import ProductCarousel from "../../ui/carousel/ProductCarousel";
+import SmallProduct from "../../ui/product/SmallProduct";
+import { ProductType } from "../../ui/product/productType";
 import { useGetProductsQuery } from '../../services/productsApi'
 
 const Main = () => {

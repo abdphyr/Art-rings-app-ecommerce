@@ -1,13 +1,7 @@
 import React from 'react';
+import { SortProps } from './catalogTypes';
 
-interface MobSortProps {
-    viewSrtOpt: boolean;
-    setViewSrtOpt: React.Dispatch<React.SetStateAction<boolean>>;
-    sortOptions: string[];
-    setSort:React.Dispatch<React.SetStateAction<string>>;
-}
-
-const MobSort: React.FC<MobSortProps> = (props) => {
+const MobSort: React.FC<SortProps> = (props) => {
     const { viewSrtOpt, setViewSrtOpt } = props
     const { sortOptions, setSort } = props
 

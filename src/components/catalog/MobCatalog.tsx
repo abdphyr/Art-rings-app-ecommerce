@@ -9,6 +9,7 @@ import filterIcon from '../../images/filter.svg';
 import Pagination from '../pagination/Pagination';
 import MobFilter from './MobFilter';
 import MobSort from './MobSort';
+import CatalogInfo from './CatalogInfo';
 
 
 const MobCatalog: React.FC<CtgPropsType> = (props) => {
@@ -37,6 +38,11 @@ const MobCatalog: React.FC<CtgPropsType> = (props) => {
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
     }, [])
+
+    const mobSortProps = {
+        viewSrtOpt, setViewSrtOpt,
+        sortOptions, setSort ,sort
+    }
 
     return (
         <>
@@ -78,7 +84,7 @@ const MobCatalog: React.FC<CtgPropsType> = (props) => {
                     </div>
                 </div>
                 {/* sort body */}
-                <MobSort viewSrtOpt={viewSrtOpt} setViewSrtOpt={setViewSrtOpt} sortOptions={sortOptions} setSort={setSort}/>
+                <MobSort {...mobSortProps}/>
                 {/* Banner */}
                 <div className="mob_ctg_banner">
                     <img src={mobileBanner} alt="mobilebanner" className="des_ctg_banner_image" />
@@ -95,17 +101,7 @@ const MobCatalog: React.FC<CtgPropsType> = (props) => {
                 <div className="mobile_catalog_products_pagination">
                     <Pagination page={page} setPage={setPage} length={products.length} />
                 </div>
-                <div className="catalog_info">
-                    Дизайнерские обручальные кольца от производителя хороши тем, что их внешний вид и особенности оформления разнообразны и можно
-                    легко подобрать те, которые подойдут именно Вам и Вашей второй половинке. В разделе представлено свыше двухсот готовых моделей
-                    обручальных колец — возможно, Вы захотите внести в некоторые из них свои небольшие дополнения или вовсе заказать неповторимую
-                    модель: мы создадим <a href='#' className="catalog_info_link">уникальный дизайн</a> по Вашему описанию или рисунку, воплотив любые идеи.Можно выбрать любой вид поверхности:
-                    глянцевую или матовую, текстурированную, узорчатую… Выполним резные обручальные кольца или с любой гравировкой. Кольца можно
-                    дополнить драгоценными камнями, например, бриллиантами — такие парные кольца смотрятся роскошно и эффектно. Всем покупателям
-                    колец с фирменной эмблемой Art-Rings мы дарим <a href="#" className="catalog_info_link">бриллиант в подарок</a>.<br />
-                    Парные обручальные кольца от «Арт-Рингз» можно недорого <a href="#" className="catalog_info_link">купить в Москве</a> или с
-                    удобной <a href="#" className="catalog_info_link">доставкой в регионы.</a> С радостью ответим на Ваши вопросы по телефонам: +7 (499) 940-87-77.
-                </div>
+                <CatalogInfo />
             </div>
         </>
     );

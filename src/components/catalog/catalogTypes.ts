@@ -55,3 +55,11 @@ export interface GetCatalogDataType {
     description: string;
     products: ProductType[]
 }
+
+export interface SortProps{
+    viewSrtOpt: boolean;
+    setViewSrtOpt: React.Dispatch<React.SetStateAction<boolean>>;
+    sortOptions: string[];
+    setSort: React.Dispatch<React.SetStateAction<string>>;
+    sort:string;
+}

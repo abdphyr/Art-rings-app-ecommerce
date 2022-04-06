@@ -1,5 +1,5 @@
 import React from 'react';
-import { SortProps } from './catalogTypes';
+import { SortProps } from '../catalogTypes';
 
 const DesSort: React.FC<SortProps> = (props) => {
     const { viewSrtOpt, setViewSrtOpt } = props

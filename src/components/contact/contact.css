@@ -98,12 +98,10 @@
         color:#000;
         margin: 10px 0;
     }
-
     .contact_body{
         display: flex;
         flex-direction: column;
     }
-
     .contact_info{
         width: 100%;
         height: 500px;
@@ -139,7 +137,6 @@
     .contact_image{
         overflow: hidden;
     }
-
     .contact_carousel{
         overflow: hidden;
         margin-top: 50px;
@@ -158,107 +155,27 @@
 }
 @media only screen and (min-width:767px){
     .contact_title_desc .contact_title{
-        font-family: 'Raleway';
-        color: #000;
-        font-weight: 400;
         font-size: 35px;
         letter-spacing: 0.05rem;
         line-height: 42px;
     }
     .contact_desc{
-        width: 600px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
         font-size: 16px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
     }
-
-    .contact_body{
-        display: flex;
-        flex-direction: column;
-    }
-
     .contact_info{
-        width: 100%;
         height: 536px;
-        background-color:#F8F9FD;
     }
     .contact_items{
         padding: 100px;
     }
-    .contact_title{
-        font-family:'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-        padding: 2px;
-    }
-    .contact_adress,.contact_email,.contact_work_time,.contact_phone_number{
-        display: flex;
-        align-items: center;  
-        margin-bottom: 20px;  
-    }
-    .contact_social_icons{
-        margin-top: 30px;
-    }
-    .contact_social_icons a img{
-        width: 26px;
-        height: 26px;
-        margin-right: 10px;
-    }
-    .contact_image{
-        overflow: hidden;
-    }
-
-    .contact_carousel{
-        overflow: hidden;
-        margin-top: 50px;
-        margin-bottom: 60px;
-
-    }
-    .contact_carousel div{
-        display: flex;
-    }
-    .contact_carousel_item{
-        width: 100%;
-    }
-    .contact_carousel_item img{
-        width: 100%;
-    }
 }
 @media only screen and (min-width:991px){
-    .contact_title_desc .contact_title{
-        font-family: 'Raleway';
-        color: #000;
-        font-weight: 400;
-        font-size: 35px;
-        letter-spacing: 0.05rem;
-        line-height: 42px;
-    }
-    .contact_desc{
-        width: 600px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
-    }
-
     .contact_body{
-        display: flex;
         justify-content: space-between;
         flex-direction: row;
     }
-
     .contact_info{
         width: 410px;
-        height: 536px;
-        background-color:#F8F9FD;
     }
     .contact_items{
         padding-top: 90px;
@@ -266,76 +183,11 @@
         padding-right: 30px;
         padding-bottom: 90px;
     }
-    .contact_title{
-        font-family:'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-        padding: 2px;
-    }
-    .contact_adress,.contact_email,.contact_work_time,.contact_phone_number{
-        display: flex;
-        align-items: center;  
-        margin-bottom: 20px;  
-    }
-    .contact_social_icons{
-        margin-top: 30px;
-    }
-    .contact_social_icons a img{
-        width: 26px;
-        height: 26px;
-        margin-right: 10px;
-    }
-    .contact_image{
-        overflow: hidden;
-    }
-
-    .contact_carousel{
-        overflow: hidden;
-        margin-top: 50px;
-        margin-bottom: 60px;
-
-    }
-    .contact_carousel div{
-        display: flex;
-    }
-    .contact_carousel_item{
-        width: 100%;
-    }
-    .contact_carousel_item img{
-        width: 100%;
-    }
 }
 @media only screen and (min-width:1200px){
     .contact_title_desc .contact_title{
-        font-family: 'Raleway';
-        color: #000;
-        font-weight: 400;
         font-size: 40px;
-        letter-spacing: 0.05rem;
         line-height: 50px;
-    }
-    .contact_desc{
-        width: 600px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
-    }
-
-    .contact_body{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .contact_info{
-        width: 410px;
-        height: 536px;
-        background-color:#F8F9FD;
     }
     .contact_items{
         padding-top: 90px;
@@ -343,122 +195,13 @@
         padding-right: 87px;
         padding-bottom: 177px;
     }
-    .contact_title{
-        font-family:'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-        padding: 2px;
-    }
-    .contact_adress,.contact_email,.contact_work_time,.contact_phone_number{
-        display: flex;
-        align-items: center;  
-        margin-bottom: 20px;  
-    }
-    .contact_social_icons{
-        margin-top: 30px;
-    }
-    .contact_social_icons a img{
-        width: 26px;
-        height: 26px;
-        margin-right: 10px;
-    }
-    .contact_image{
-        overflow: hidden;
-    }
-
     .contact_carousel{
-        overflow: hidden;
-        margin-top: 50px;
         margin-bottom: 80px;
-
-    }
-    .contact_carousel div{
-        display: flex;
-    }
-    .contact_carousel_item{
-        width: 100%;
-    }
-    .contact_carousel_item img{
-        width: 100%;
     }
 }
 @media only screen and (min-width:1400px){
     .contact_title_desc .contact_title{
-        font-family: 'Raleway';
-        color: #000;
-        font-weight: 400;
         font-size: 43px;
-        letter-spacing: 0.05rem;
         line-height: 53px;
-    }
-    .contact_desc{
-        width: 600px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
-    }
-
-    .contact_body{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .contact_info{
-        width: 410px;
-        height: 536px;
-        background-color:#F8F9FD;
-    }
-    .contact_items{
-        padding-top: 90px;
-        padding-left: 50px;
-        padding-right: 87px;
-        padding-bottom: 177px;
-    }
-    .contact_title{
-        font-family:'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-        padding: 2px;
-    }
-    .contact_adress,.contact_email,.contact_work_time,.contact_phone_number{
-        display: flex;
-        align-items: center;  
-        margin-bottom: 20px;  
-    }
-    .contact_social_icons{
-        margin-top: 30px;
-    }
-    .contact_social_icons a img{
-        width: 26px;
-        height: 26px;
-        margin-right: 10px;
-    }
-    .contact_image{
-        overflow: hidden;
-    }
-
-    .contact_carousel{
-        overflow: hidden;
-        margin-top: 50px;
-        margin-bottom: 80px;
-
-    }
-    .contact_carousel div{
-        display: flex;
-    }
-    .contact_carousel_item{
-        width: 100%;
-    }
-    .contact_carousel_item img{
-        width: 100%;
     }
 }

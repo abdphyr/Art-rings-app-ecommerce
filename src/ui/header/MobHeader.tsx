@@ -2,11 +2,6 @@ import { useState,useEffect } from "react";
 import "./mobile.css";
 import { Link } from "react-router-dom";
 import searchImage from "../../images/search.svg";
-import fb from "../../images/FB.svg";
-import ins from "../../images/INS.svg";
-import tg from "../../images/TG.svg";
-import wh from "../../images/WH.svg";
-import vk from "../../images/VK.svg";
 import menu from "../../images/Menu.svg";
 import cart from "../../images/cart.svg";
 import heart from "../../images/heart.svg";
@@ -17,6 +12,7 @@ import searchScroll from "../../images/searchScroll.svg";
 import { HeaderPropsType } from "./headerPropsType";
 import { useDispatch } from "react-redux";
 import { setSearch } from '../../features/searchSlice';
+import MobSocialIcons from "../socialicons/MobSocialIcons";
 
 const MobHeader = ({...props}:HeaderPropsType) => {
 
@@ -58,25 +54,10 @@ const MobHeader = ({...props}:HeaderPropsType) => {
         <div className="wrapper">
           <div className="mob_icons">
             <div className="mob_social_icons">
-              <a href="#" className="mob_social_icon">
-                <img src={fb} alt="mob_social_icon" className="mob_social_icon_img" />
-              </a>
-              <a href="#" className="mob_social_icon">
-                <img src={vk} alt="mob_social_icon" className="mob_social_icon_img" />
-              </a>
-              <a href="#" className="mob_social_icon">
-                <img src={wh} alt="mob_social_icon" className="mob_social_icon_img" />
-              </a>
-              <a href="#" className="mob_social_icon">
-                <img src={ins} alt="mob_social_icon" className="mob_social_icon_img" />
-              </a>
-              <a href="#" className="mob_social_icon">
-                <img src={tg} alt="mob_social_icon" className="mob_social_icon_img" />
-              </a>
+              <MobSocialIcons />
             </div>
             <button onClick={()=>{
               setShowShowSearch(!showSearch)
-              // setSearch('')
             }} className="mob_search_icon">
               <img
                 src={searchImage}

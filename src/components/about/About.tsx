@@ -4,11 +4,7 @@ import map from "../../images/map-pin.svg";
 import mail from "../../images/mail.svg";
 import clock from "../../images/clock.svg";
 import phone from "../../images/phone.svg";
-import fb from "../../images/FB.svg";
-import ins from "../../images/INS.svg";
-import tg from "../../images/TG.svg";
-import wh from "../../images/WH.svg";
-import vk from "../../images/VK.svg";
+import SocialIcons from '../../ui/socialicons/SocialIcons';
 
 
 const About: React.FC = () => {
@@ -81,21 +77,7 @@ const About: React.FC = () => {
                                 </div>
                             </div>
                             <div className="contact_social_icons">
-                                <a href="#" className="social_icon">
-                                    <img src={fb} alt="social_icon" className="social_icon_img" />
-                                </a>
-                                <a href="#" className="social_icon">
-                                    <img src={vk} alt="social_icon" className="social_icon_img" />
-                                </a>
-                                <a href="#" className="social_icon">
-                                    <img src={wh} alt="social_icon" className="social_icon_img" />
-                                </a>
-                                <a href="#" className="social_icon">
-                                    <img src={ins} alt="social_icon" className="social_icon_img" />
-                                </a>
-                                <a href="#" className="social_icon">
-                                    <img src={tg} alt="social_icon" className="social_icon_img" />
-                                </a>
+                                <SocialIcons />
                             </div>
                         </div>
                     </div>

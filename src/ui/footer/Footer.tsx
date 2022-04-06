@@ -1,12 +1,8 @@
 import React from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
-import fb from "../../images/FB.svg";
-import ins from "../../images/INS.svg";
-import tg from "../../images/TG.svg";
-import wh from "../../images/WH.svg";
-import vk from "../../images/VK.svg";
 import footerlogo from "../../images/footerlogo.png";
+import FooterSocialIcons from "../socialicons/FooterSocialIcons";
 
 const Footer = () => {
   
@@ -100,80 +96,12 @@ const Footer = () => {
               <a className="mob_color">info@art-rings.ru</a>
             </div>
             <div className="footer_icons mob_hide_icons">
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={fb}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={vk}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={wh}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={ins}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={tg}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
+              <FooterSocialIcons />
             </div>
           </div>
           <div className="footer_col_6">
             <div className="footer_icons">
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={fb}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={vk}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={wh}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={ins}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
-              <a href="#" className="footer_social_icon">
-                <img
-                  src={tg}
-                  alt="footer_social_icon"
-                  className="footer_social_icon_img"
-                />
-              </a>
+              <FooterSocialIcons />
             </div>
           </div>
           <div className="footer_col_7">

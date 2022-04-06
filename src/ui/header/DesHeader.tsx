@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import "./desctop.css";
 import { Link } from "react-router-dom";
 import map from "../../images/map-pin.svg";
@@ -22,44 +22,45 @@ import searchScroll from "../../images/searchScroll.svg";
 import { HeaderPropsType } from "./headerPropsType";
 import { useDispatch } from "react-redux";
 import { setSearch } from '../../features/searchSlice';
+import SocialIcons from "../socialicons/SocialIcons";
 
-const DesHeader = ({...props}:HeaderPropsType) => {
+const DesHeader = ({ ...props }: HeaderPropsType) => {
 
-  const { showMenu, setShowMenu} = props
+  const { showMenu, setShowMenu } = props
   const { search, favouritesNumber, cartNumber } = props
   const dispatch = useDispatch()
-    
+
   const [userWidth, setUserWidth] = useState(document.body.clientWidth)
   const [scroll, setScroll] = useState(false)
 
   useEffect(() => {
-      const handleResize = () => {
-      setUserWidth(document.body.clientWidth)        
-      }
-      window.addEventListener('resize', handleResize)    
-      return () => window.removeEventListener('resize', handleResize)
+    const handleResize = () => {
+      setUserWidth(document.body.clientWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
 
   useEffect(() => {
     const handleScroll = () => {
-      if(userWidth > 1400){
+      if (userWidth > 1400) {
         setScroll(window.scrollY > 330)
       }
-      if(userWidth < 1400 && userWidth > 1200){
+      if (userWidth < 1400 && userWidth > 1200) {
         setScroll(window.scrollY > 315)
       }
-      if(userWidth < 1200 && userWidth > 991){
-        setScroll(window.scrollY > 300)        
+      if (userWidth < 1200 && userWidth > 991) {
+        setScroll(window.scrollY > 300)
       }
-      if(userWidth < 991 && userWidth > 767){
-        setScroll(window.scrollY > 265)       
+      if (userWidth < 991 && userWidth > 767) {
+        setScroll(window.scrollY > 265)
       }
-      if(userWidth < 767 && userWidth > 576){
-        setScroll(window.scrollY > 240)       
+      if (userWidth < 767 && userWidth > 576) {
+        setScroll(window.scrollY > 240)
       }
     }
-    window.addEventListener('scroll', handleScroll)    
+    window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -104,21 +105,7 @@ const DesHeader = ({...props}:HeaderPropsType) => {
               </div>
             </div>
             <div className="col social_icons">
-              <a href="#" className="social_icon">
-                <img src={fb} alt="social_icon" className="social_icon_img" />
-              </a>
-              <a href="#" className="social_icon">
-                <img src={vk} alt="social_icon" className="social_icon_img" />
-              </a>
-              <a href="#" className="social_icon">
-                <img src={wh} alt="social_icon" className="social_icon_img" />
-              </a>
-              <a href="#" className="social_icon">
-                <img src={ins} alt="social_icon" className="social_icon_img" />
-              </a>
-              <a href="#" className="social_icon">
-                <img src={tg} alt="social_icon" className="social_icon_img" />
-              </a>
+              <SocialIcons />
             </div>
           </div>
         </div>
@@ -145,10 +132,10 @@ const DesHeader = ({...props}:HeaderPropsType) => {
           <div className="search_section">
             <div className="search_input">
               <input
-                    value={search} 
-                    onChange={(e)=>dispatch(setSearch(e.target.value))} 
-                    type="text" 
-                    placeholder="Поиск украшений" />
+                value={search}
+                onChange={(e) => dispatch(setSearch(e.target.value))}
+                type="text"
+                placeholder="Поиск украшений" />
             </div>
             <div className="search_icon">
               <img src={searchIcon} alt="search_icon" />
@@ -166,12 +153,12 @@ const DesHeader = ({...props}:HeaderPropsType) => {
         <div className="nav_section">
           <div className="nav_icon_logo">
             <div className="nav_logo">
-              <button onClick={()=>setShowMenu(!showMenu)}>
+              <button onClick={() => setShowMenu(!showMenu)}>
                 <img src={logo} alt="" />
               </button>
             </div>
             <div className="nav_icon">
-              <button onClick={()=>setShowMenu(!showMenu)}>
+              <button onClick={() => setShowMenu(!showMenu)}>
                 <img src={menu} alt="MenuIcon" />
               </button>
             </div>
@@ -198,7 +185,7 @@ const DesHeader = ({...props}:HeaderPropsType) => {
               </Link>
             </div>
             <div className="heart_icon">
-            {favouritesNumber > 0 && <div><span>{favouritesNumber}</span></div>}
+              {favouritesNumber > 0 && <div><span>{favouritesNumber}</span></div>}
               <Link to="/favourites">
                 <img src={heart} alt="heart" />
               </Link>
@@ -207,42 +194,42 @@ const DesHeader = ({...props}:HeaderPropsType) => {
         </div>
       </div>
       {/* SCROLL HEADER SECTION */}
-      <div className={(scroll && 'active')+(" scroll_nav_section")}>
-          <div className="wrapper des_scroll">
-            <div className="scroll_icon_brand">
-              <button className="scroll_icon" onClick={()=>setShowMenu(!showMenu)}>
-                <img src={menuScroll} alt="MenuIcon" />
-              </button>
-              <div className="scroll_brand">
-                <Link to="/">art-rings</Link>
-              </div>
+      <div className={(scroll && 'active') + (" scroll_nav_section")}>
+        <div className="wrapper des_scroll">
+          <div className="scroll_icon_brand">
+            <button className="scroll_icon" onClick={() => setShowMenu(!showMenu)}>
+              <img src={menuScroll} alt="MenuIcon" />
+            </button>
+            <div className="scroll_brand">
+              <Link to="/">art-rings</Link>
             </div>
-            <div className="scroll_search">
-                <input
-                    value={search} 
-                    onChange={(e)=>dispatch(setSearch(e.target.value))} 
-                    type="text" 
-                    placeholder="Поиск украшений" />
-                <button className="scroll_search_icon">
-                  <img src={searchScroll} alt="search_icon" />
-                </button>
+          </div>
+          <div className="scroll_search">
+            <input
+              value={search}
+              onChange={(e) => dispatch(setSearch(e.target.value))}
+              type="text"
+              placeholder="Поиск украшений" />
+            <button className="scroll_search_icon">
+              <img src={searchScroll} alt="search_icon" />
+            </button>
+          </div>
+          <div className="scroll_cart_heart">
+            <div className="scroll_cart_icon">
+              {cartNumber > 0 && <div><span>{cartNumber}</span></div>}
+              <Link to="/cart">
+                <img src={cartScroll} alt="cart" />
+              </Link>
             </div>
-            <div className="scroll_cart_heart">
-              <div className="scroll_cart_icon">
-                {cartNumber > 0 && <div><span>{cartNumber}</span></div>}
-                <Link to="/cart">
-                  <img src={cartScroll} alt="cart" />
-                </Link>
-              </div>
-              <div className="scroll_heart_icon">
-                {favouritesNumber > 0 && <div><span>{favouritesNumber}</span></div>}
-                <Link to="/favourites">
-                  <img src={heartScroll} alt="heart" />
-                </Link>
-              </div>
+            <div className="scroll_heart_icon">
+              {favouritesNumber > 0 && <div><span>{favouritesNumber}</span></div>}
+              <Link to="/favourites">
+                <img src={heartScroll} alt="heart" />
+              </Link>
             </div>
           </div>
         </div>
+      </div>
     </>
   );
 };

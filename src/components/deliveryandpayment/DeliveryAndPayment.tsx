@@ -2,7 +2,7 @@ import React,{ useEffect } from 'react';
 import './deliveryandpayment.css';
 import deliver from '../../images/deliver.png';
 
-const DeliveryAndPayment = () => {
+const DeliveryAndPayment:React.FC = () => {
     
     useEffect(() => {
         window.scrollTo(0,0)

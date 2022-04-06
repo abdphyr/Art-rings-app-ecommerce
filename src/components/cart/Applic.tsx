@@ -3,6 +3,8 @@ import './applic.css';
 import navbarlogo from "../../images/mainlogo.png";
 import closebtn from "../../images/closebtnicon.svg";
 import { ApplicPropsType } from './cartTypes';
+import MyInput from './MyInput';
+import MyLabel from './MyLabel';
 
 const Applic: React.FC<ApplicPropsType> = ({ applic, setApplic }) => {
 
@@ -19,14 +21,16 @@ const Applic: React.FC<ApplicPropsType> = ({ applic, setApplic }) => {
             document.body.style.overflow = 'unset'
     }, [applic]);
 
+    const handleClose = () => {
+        setApplic(false)
+        setSuccess(false)
+    }
+
     return (
         <div onClick={() => setApplic(false)} className={(applic && 'active') + (' applic')}>
             <div onClick={(e) => e.stopPropagation()} className={(applic && 'active') + (" applic_body")}>
                 <div className="applic_items">
-                    <button onClick={() => {
-                        setApplic(false)
-                        setSuccess(false)
-                    }} className="applic_close_btn">
+                    <button onClick={handleClose} className="applic_close_btn">
                         <img src={closebtn} alt="close btn icon" />
                     </button>
                     <div className="applic_items_logo">
@@ -40,27 +44,27 @@ const Applic: React.FC<ApplicPropsType> = ({ applic, setApplic }) => {
                         </div>
                         <form className='applic_items_form' action="">
                             <div className="applic_items_form_name">
-                                <label className='applic_form_label' htmlFor="name">Ваше имя</label>
-                                <input type="text" placeholder='Ваше имя' className='applic_form_input' id='name' />
+                                <MyLabel className='applic_form_label' htmlFor="name">Ваше имя</MyLabel>
+                                <MyInput type="text" placeholder='Ваше имя' className='applic_form_input' id='name' />
                             </div>
                             <div className="applic_items_form_phone_email">
                                 <div className="applic_items_form_phone">
-                                    <label htmlFor="phone" className='applic_form_label' >Ваш телефон</label>
-                                    <input placeholder='Ваш телефон' type="text" className='applic_form_input' id='phone' />
+                                    <MyLabel htmlFor="phone" className='applic_form_label'>Ваш телефон</MyLabel>
+                                    <MyInput placeholder='Ваш телефон' type="text" className='applic_form_input' id='phone' />
                                 </div>
                                 <div className="applic_items_form_email">
-                                    <label htmlFor="email" className='applic_form_label'>Ваш e-mail</label>
-                                    <input placeholder='Ваш e-mail' type="email" className='applic_form_input' id='email' />
+                                    <MyLabel htmlFor="email" className='applic_form_label'>Ваш e-mail</MyLabel>
+                                    <MyInput placeholder='Ваш e-mail' type='email' className='applic_form_input' id='email' />
                                 </div>
                             </div>
                             <div className="applic_items_form_city_adress">
                                 <div className="applic_items_form_city">
-                                    <label htmlFor="city" className='applic_form_label' >Город</label>
-                                    <input placeholder='Ваш город' type="text" className='applic_form_input' id='city' />
+                                    <MyLabel htmlFor="city" className='applic_form_label' >Город</MyLabel>
+                                    <MyInput placeholder='Ваш город' type='text' className='applic_form_input' id='city' />
                                 </div>
                                 <div className="applic_items_form_adress">
-                                    <label htmlFor="adress" className='applic_form_label'>Адрес</label>
-                                    <input placeholder='Ваш адрес' type="text" className='applic_form_input' id='adress' />
+                                    <MyLabel htmlFor="adress" className='applic_form_label'>Адрес</MyLabel>
+                                    <MyInput placeholder='Ваш адрес' type="text" className='applic_form_input' id='adress' />
                                 </div>
                             </div>
                             <div className="applic_items_form_info">
@@ -87,11 +91,7 @@ const Applic: React.FC<ApplicPropsType> = ({ applic, setApplic }) => {
                         <div className="recieve_applic_title_mini">
                             В ближайшее время с вами свяжется оператор для подтверждения заказа.
                         </div>
-                        <a onClick={() => {
-                            setApplic(false)
-                            setSuccess(false)
-                            // navigate('/')
-                        }} className="recieve_applic_back_catalog">
+                        <a onClick={handleClose} className="recieve_applic_back_catalog">
                             ВЕРНУТЬСЯ В КАТАЛОГ
                         </a>
                     </div>

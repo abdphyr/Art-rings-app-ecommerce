@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CtgPropsType } from './catalogTypes';
+import { CtgPropsType } from '../catalogTypes';
 import closebtnicon from '../../images/closebtnicon.svg';
 import MobFilterPrice from './MobFilterPrice';
 import MobFilterInsert from './MobFilterInsert';

@@ -44,7 +44,6 @@
        width: 330px; 
     }
 }
-
 @media only screen and (min-width:576px){
     .mob_favourites{
         display: none;
@@ -90,7 +89,6 @@
         display: none;
     }
     .des_fv_banner img{
-        /* align-self: center; */
         width: 180px;
         height: 340px;
     }
@@ -112,45 +110,11 @@
     } 
 }
 @media only screen and (min-width:767px){
-    .mob_favourites{
-        display: none;
-    }
-    .favourites_title{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .favourites_title div{
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 35px;
-        text-transform: uppercase;
-        color: black;
-    }
-    .favourites_title button{
-        color: #020F59;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 22px;
-        opacity: 0.5;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-    .des_favourites{
-        display: flex;
-        margin-top: 50px;    
-        height: 100%;    
+    .des_favourites{   
         flex-direction: row;
     }
     .des_fv_products_body{/*products*/
         width: 80%;
-        height: 100%;
-        overflow: hidden;
     }
     .des_fv_banner{/*banner*/
         width: 20%;
@@ -158,230 +122,39 @@
         align-items:flex-start;
         justify-content: center;
     }
-    .des_fv_banner img{
-        /* align-self: center; */
-        width: 180px;
-        height: 340px;
-    }
-    .fv_pagination{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 80px;
-        margin-top: 20px;
-    }
-    .fv_pagination_line{
-        display: none;
-        height: 2px;
-        width: 100%;
-        background: #9EAFC2;
-        opacity: 0.2;
-        margin-bottom: 15px;
-        margin-top: 20px;
-    } 
 }
 @media only screen and (min-width:991px){
-    .mob_favourites{
-        display: none;
-    }
-    .favourites_title{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
     .favourites_title div{
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 600;
         font-size: 26px;
-        line-height: 35px;
-        text-transform: uppercase;
-        color: black;
     }
     .favourites_title button{
-        color: #020F59;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 600;
         font-size: 16px;
-        line-height: 22px;
-        opacity: 0.5;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-    .des_favourites{
-        display: flex;
-        margin-top: 50px;    
-        height: 100%;    
     }
     .des_fv_products_body{/*products*/
         width: 70%;
         height: 620px;
-        overflow: hidden;
     }
     .des_fv_banner{/*banner*/
         width: 30%;
-        display: flex;
-        align-items:center;
-        justify-content: center;
     }
     .des_fv_banner img{
         width: 220px;
         height: 450px;
     }
     .fv_pagination{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin-bottom: 90px;
-        margin-top: 20px;
-    }
-    .fv_pagination_line{
-        display: none;
-        height: 2px;
-        width: 100%;
-        background: #9EAFC2;
-        opacity: 0.2;
-        margin-bottom: 15px;
-        margin-top: 20px;
-    }
-    
+    } 
 }
 @media only screen and (min-width:1200px){
-    .mob_favourites{
-        display: none;
-    }
-    .favourites_title{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .favourites_title div{
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 600;
-        font-size: 26px;
-        line-height: 35px;
-        text-transform: uppercase;
-        color: black;
-    }
-    .favourites_title button{
-        color: #020F59;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        opacity: 0.5;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-    .des_favourites{
-        display: flex;
-        margin-top: 50px;
-    }
     .des_fv_products_body{/*products*/
         width: 70%;
         height: 100%;
-        overflow: hidden;
-    }
-    .des_fv_banner{/*banner*/
-        width: 30%;
-        display: flex;
-        align-items:center;
-        justify-content: center;
     }
     .des_fv_banner img{
         width: 294px;
         height: 595px;
     }
-
-    .des_fv_product{
-        /* border: 1px solid red; */
-    }
     .fv_pagination{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin-bottom: 142px;
     }
-    .fv_pagination_line{
-        height: 2px;
-        width: 100%;
-        background: #9EAFC2;
-        opacity: 0.2;
-        margin-bottom: 15px;
-        margin-top: 20px;
-    }
-    
-}
-@media only screen and (min-width:1400px){
-    .mob_favourites{
-        display: none;
-    }
-    .favourites_title{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .favourites_title div{
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 600;
-        font-size: 26px;
-        line-height: 35px;
-        text-transform: uppercase;
-        color: black;
-    }
-    .favourites_title button{
-        color: #020F59;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 22px;
-        opacity: 0.5;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-    .des_favourites{
-        display: flex;
-        margin-top: 50px;
-    }
-    .des_fv_products_body{/*products*/
-        width: 70%;
-        overflow: hidden;
-    }
-    .des_fv_banner{/*banner*/
-        width: 30%;
-        display: flex;
-        align-items:center;
-        justify-content: center;
-    }
-    .des_fv_banner img{
-        width: 294px;
-        height: 595px;
-    }
-
-    .des_fv_product{
-        /* border: 1px solid red; */
-    }
-    .fv_pagination{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 142px;
-    }
-    .fv_pagination_line{
-        height: 2px;
-        width: 100%;
-        background: #9EAFC2;
-        opacity: 0.2;
-        margin-bottom: 15px;
-        margin-top: 20px;
-    }
-    
 }

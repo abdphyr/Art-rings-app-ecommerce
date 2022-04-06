@@ -1,6 +1,3 @@
-
-
-
 @media only screen and (max-width:576px){
     .guarantees{
         width: 100%;
@@ -46,6 +43,7 @@
         margin: 10px 0;
     }
 }
+
 @media only screen and (min-width:576px){
     .guarantees{
         width: 100%;
@@ -93,12 +91,9 @@
 }
 @media only screen and (min-width:767px){
     .guarantees{
-        width: 100%;
         height: 450px;
-        background-color: #ECEFF3;
     }
     .grts{
-        display: flex;
         justify-content: space-between;
         flex-direction: row;
     }
@@ -110,136 +105,49 @@
     }
     .guarantees_rigth img{
         height: 90%;
-        width: 100%;
-        object-fit: contain;
     }
     .guarantees_title_desc{
         margin-top: 40px;
     }
     .guarantees_title{
-        font-family: 'Raleway',sans-serif;
-        font-style: normal;
-        font-weight: 400;
         font-size: 30px;
         line-height: 50px;
-        letter-spacing: 0.05em;
-        color: #000000;
         margin-bottom: 23px;
     }
     .guarantees_desc p{
         width: 90%;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
     }
 }
 @media only screen and (min-width:991px){
-    .guarantees{
-        width: 100%;
-        height: 450px;
-        background-color: #ECEFF3;
-    }
-    .grts{
-        display: flex;
-        justify-content: space-between;
-    }
-    .guarantees_left{
-        width: 50%;
-    }
-    .guarantees_rigth{
-        width: 50%;
-    }
     .guarantees_rigth img{
-        height: 90%;
         width: 90%;
     }
     .guarantees_title_desc{
         margin-top: 60px;
     }
     .guarantees_title{
-        font-family: 'Raleway',sans-serif;
-        font-style: normal;
-        font-weight: 400;
         font-size: 35px;
-        line-height: 50px;
-        letter-spacing: 0.05em;
-        color: #000000;
         margin-bottom: 23px;
     }
     .guarantees_desc p{
         width: 80%;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
     }
 }
 @media only screen and (min-width:1200px){
     .guarantees{
-        width: 100%;
         height: 500px;
-        background-color: #ECEFF3;
-    }
-    .grts{
-        display: flex;
-        justify-content: space-between;
-    }
-    .guarantees_left{
-        width: 50%;
-    }
-    .guarantees_rigth{
-        width: 50%;
-    }
-    .guarantees_rigth img{
-        height: 90%;
-        width: 90%;
-    }
-    .guarantees_title_desc{
-        margin-top: 60px;
     }
     .guarantees_title{
-        font-family: 'Raleway',sans-serif;
-        font-style: normal;
-        font-weight: 400;
         font-size: 40px;
-        line-height: 50px;
-        letter-spacing: 0.05em;
-        color: #000000;
-        margin-bottom: 23px;
     }
     .guarantees_desc p{
         width: 70%;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 400;
         font-size: 16px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
     }
 }
 @media only screen and (min-width:1400px){
     .guarantees{
-        width: 100%;
         height: 580px;
-        background-color: #ECEFF3;
-    }
-    .grts{
-        display: flex;
-        justify-content: space-between;
-    }
-    .guarantees_left{
-        width: 50%;
-    }
-    .guarantees_rigth{
-        width: 50%;
     }
     .guarantees_rigth img{
         height: 100%;
@@ -250,23 +158,7 @@
         margin-top: 100px;
     }
     .guarantees_title{
-        font-family: 'Raleway',sans-serif;
-        font-style: normal;
-        font-weight: 400;
         font-size: 45px;
         line-height: 53px;
-        letter-spacing: 0.05em;
-        color: #000000;
-        margin-bottom: 23px;
-    }
-    .guarantees_desc p{
-        width: 70%;
-        font-family: 'Open Sans',sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color:#000;
-        margin: 10px 0;
     }
 }

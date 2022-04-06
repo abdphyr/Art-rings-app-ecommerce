@@ -1,17 +1,14 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./mainpage.css";
-import { Link} from "react-router-dom";
-import MainCarousel from "../../ui/carousel/MainCarousel";
 import briliant from '../../images/diamond.svg';
-import katalog1 from '../../images/katalog1.png';
-import katalog2 from '../../images/katalog2.png';
-import katalog3 from '../../images/katalog3.png';
+import MainCarousel from "../../ui/carousel/MainCarousel";
 import ProductCarousel from "../../ui/carousel/ProductCarousel";
 import SmallProduct from "../../ui/product/SmallProduct";
 import { ProductType } from "../../ui/product/productType";
 import { useGetProductsQuery } from '../../services/productsApi'
+import MainPageCatalog from "./MainPageCatalog";
 
-const Main = () => {
+const Main:React.FC = () => {
 
     const { data } = useGetProductsQuery('new')
     const products:ProductType[] = data?.products
@@ -45,41 +42,7 @@ const Main = () => {
                     Бриллиант в подарок
                 </div>
             </div>
-            <div className="mainpage_catalog">
-                <div className="wrapper">
-                    <div className="mp_ct">
-                        <div className="mp_ct_title">
-                            КАТАЛОГ
-                        </div>
-                        <div className="mp_ct_items">
-                            <div className="mp_ct_item">
-                                <img src={katalog1} alt="katalog1" />
-                                <Link to='catalog/wedding' className="mp_ct_link">
-                                    <a >ОБРУЧАЛЬНЫЕ КОЛЬЦА</a>
-                                </Link>
-                            </div>
-                            <div className="mp_ct_item">
-                                <img src={katalog2} alt="katalog1" />
-                                <Link to='catalog/ingagement' className="mp_ct_link">
-                                    <a>ПОМОЛВОЧНЫЕ КОЛЬЦА</a>
-                                </Link>
-                            </div>
-                            <div className="mp_ct_item">
-                                <img src={katalog3} alt="katalog1" />
-                                <Link to='catalog/weddingduet' className="mp_ct_link">
-                                    <a>СВАДЕБНЫЕ ДУЭТЫ</a>
-                                </Link>
-                            </div>
-                            <div className="mp_ct_item">
-                                <img src={katalog1} alt="katalog1" />
-                                <Link to='/order' className="mp_ct_link">
-                                    <a>НА ЗАКАЗ</a>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            </div>
+            <MainPageCatalog />
             <div className="wrapper">
                 <div className="new_products">
                     <div className="nw_prs_title">

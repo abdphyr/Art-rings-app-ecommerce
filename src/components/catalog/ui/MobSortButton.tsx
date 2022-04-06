@@ -1,5 +1,5 @@
 import React from 'react';
-import mobSortIcon from '../../images/mobileSortIcon.svg';
+import mobSortIcon from '../../../images/mobileSortIcon.svg';
 
 interface MobSortButton {
     viewSrtOpt: boolean;

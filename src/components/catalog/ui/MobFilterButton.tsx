@@ -1,5 +1,5 @@
 import React from 'react';
-import filterIcon from '../../images/filter.svg';
+import filterIcon from '../../../images/filter.svg';
 
 interface MobFilterButtonProps {
     setFilterPage: React.Dispatch<React.SetStateAction<boolean>>;

@@ -1,5 +1,5 @@
 import React from 'react';
-import filterRadioBtn from '../../images/filterRadioBtn.svg';
+import filterRadioBtn from '../../../images/filterRadioBtn.svg';
 
 interface MobFilterTagProps {
     filterTagsActive: boolean;

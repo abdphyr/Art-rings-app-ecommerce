@@ -162,314 +162,32 @@
 
 }
 @media only screen  and (min-width:767px){
-    .main_carousel{
-        width: 100%;/*wwwwwwwwwwwwwwwwwwwwwwwwww*/
-        overflow: hidden;
-        position: relative;
-        margin-top: 30px;/*ttttttttttttttttttttttttttttttttt*/
-        margin-bottom: 60px;/*mbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
-    }
-    .main_cr_items{
-        display: flex;
-    }
-    .main_cr_item{
-        width: 100%;
-    }
-    .main_cr_title{
-        text-align: center;
-        margin-bottom: 30px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 27px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #000000;
-    }
-    
-    .main_cr_item img{
-        width: 100%;
-        object-fit: contain;
-    }
-    .main_cr_buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .main_cr_button{
-        transition: all 0.5s ease;
-        cursor: pointer;
-        margin: 10px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 1px solid rgb(128,135,172);
-        box-sizing: border-box;
-    }
-    .main_cr_button.active{
-        width: 10px;
-        height: 10px;
-        border-radius:50%;
-        background-color:rgb(128,135,172);
-    }
-    .main_cr_ctrl_buttons{
-        width: 100%;/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
-        z-index: 1;
-        top: 50%;
-        left: 0;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-    }
-    .main_cr_ctrl_button{
-        border:none;
-        outline: none;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        cursor:pointer;
-        font-size: 20px;
-        opacity: 0.8;
-        background-color:transparent;   
-    }
     .main_cr_ctrl_button img{
         width: 20px;
         height: 20px;
     }
-    .main_cr_ctrl_button.disabled{
-        opacity: 0.1;
-    }
-
-}
-@media only screen  and (min-width:991px){
-    .main_carousel{
-        width: 100%;/*wwwwwwwwwwwwwwwwwwwwwwwwww*/
-        overflow: hidden;
-        position: relative;
-        margin-top: 30px;/*ttttttttttttttttttttttttttttttttt*/
-        margin-bottom: 60px;/*mbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
-    }
-    .main_cr_items{
-        display: flex;
-    }
-    .main_cr_item{
-        width: 100%;
-    }
-    .main_cr_title{
-        text-align: center;
-        margin-bottom: 30px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 27px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #000000;
-    }
-    
-    .main_cr_item img{
-        width: 100%;
-        object-fit: contain;
-    }
-    .main_cr_buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .main_cr_button{
-        transition: all 0.5s ease;
-        cursor: pointer;
-        margin: 10px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 1px solid rgb(128,135,172);
-        box-sizing: border-box;
-    }
-    .main_cr_button.active{
-        width: 10px;
-        height: 10px;
-        border-radius:50%;
-        background-color:rgb(128,135,172);
-    }
-    .main_cr_ctrl_buttons{
-        width: 100%;/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
-        z-index: 1;
-        top: 50%;
-        left: 0;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-    }
-    .main_cr_ctrl_button{
-        border:none;
-        outline: none;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        cursor:pointer;
-        font-size: 20px;
-        opacity: 0.8;
-        background-color:transparent;   
-    }
-    .main_cr_ctrl_button img{
-        width: 20px;
-        height: 20px;
-    }
-    .main_cr_ctrl_button.disabled{
-        opacity: 0.1;
-    }
-
 }
 @media only screen  and (min-width:1200px){
-    .main_carousel{
-        width: 100%;/*wwwwwwwwwwwwwwwwwwwwwwwwww*/
-        overflow: hidden;
-        position: relative;
-        margin-top: 30px;/*ttttttttttttttttttttttttttttttttt*/
-        margin-bottom: 60px;/*mbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
-    }
-    .main_cr_items{
-        display: flex;
-    }
-    .main_cr_item{
-        width: 100%;
-    }
     .main_cr_title{
-        text-align: center;
         margin-bottom: 40px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
         font-size: 30px;
         line-height: 33px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #000000;
-    }
-    
-    .main_cr_item img{
-        width: 100%;
-        object-fit: contain;
-    }
-    .main_cr_buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .main_cr_button{
-        transition: all 0.5s ease;
-        cursor: pointer;
-        margin: 10px;
         width: 13px;
         height: 13px;
-        border-radius: 50%;
-        border: 1px solid rgb(128,135,172);
-        box-sizing: border-box;
-    }
-    .main_cr_button.active{
-        width: 10px;
-        height: 10px;
-        border-radius:50%;
-        background-color:rgb(128,135,172);
-    }
-    .main_cr_ctrl_buttons{
-        width: 100%;/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
-        z-index: 1;
-        top: 50%;
-        left: 0;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
     }
     .main_cr_ctrl_button{
-        border:none;
-        outline: none;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        cursor:pointer;
-        font-size: 30px;
-        opacity: 0.8;
-        background-color:transparent;   
+        font-size: 30px;  
     }
-    .main_cr_ctrl_button.disabled{
-        opacity: 0.1;
-    }
-
 }
 @media only screen  and (min-width:1400px){
-    .main_carousel{
-        width: 100%;/*wwwwwwwwwwwwwwwwwwwwwwwwww*/
-        overflow: hidden;
-        position: relative;
-        margin-top: 30px;/*ttttttttttttttttttttttttttttttttt*/
-        margin-bottom: 60px;/*mbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
-    }
-    .main_cr_items{
-        display: flex;
-    }
-    .main_cr_item{
-        width: 100%;
-    }
     .main_cr_title{
-        text-align: center;
-        margin-bottom: 10px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 400;
         font-size: 32px;
         line-height: 38px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #000000;
-    }
-    
-    .main_cr_item img{
-        width: 100%;
-        object-fit: contain;
-    }
-    .main_cr_buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .main_cr_button{
-        transition: all 0.5s ease;
-        cursor: pointer;
-        margin: 10px;
         width: 15px;
         height: 15px;
-        border-radius: 50%;
-        border: 1px solid rgb(128,135,172);
-        box-sizing: border-box;
     }
-    .main_cr_button.active{
-        width: 10px;
-        height: 10px;
-        border-radius:50%;
-        background-color:rgb(128,135,172);
-    }
-    .main_cr_ctrl_buttons{
-        width: 100%;/*kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk*/
-        z-index: 1;
-        top: 50%;
-        left: 0;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-    }
-    .main_cr_ctrl_button{
-        border:none;
-        outline: none;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        cursor:pointer;
-        font-size: 30px;
-        opacity: 0.8;
-        background-color:transparent;   
-    }
-    .main_cr_ctrl_button.disabled{
-        opacity: 0.1;
-    }
-
 }

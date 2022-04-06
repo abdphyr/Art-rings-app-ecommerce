@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './cart.css';
 import './applic.css';
 import Breadcrumb from '../breadcrumb/Breadcrumb';
@@ -9,33 +9,30 @@ import cartBanner from '../../images/cartBanner.png';
 import mobileBanner from '../../images/mobileBanner.png';
 import closebtn from "../../images/closebtnicon.svg";
 import Applic from './Applic';
-import { CartItemType } from './cartTypes'
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../app/store';
-import { addItemCart, delItemCart, incQu, decQu, clsCart } from '../../features/cartSlice';
+import { delItemCart, incQu, decQu, clsCart } from '../../features/cartSlice';
 
 
-const Cart = () => {
+const Cart: React.FC = () => {
 
     const dispatch = useDispatch()
-    const cart = useSelector((state:RootState) => state.cart)
-    
+    const cart = useSelector((state: RootState) => state.cart)
+
     const [applic, setApplic] = useState(false)
     const location = useLocation()
-    
-    const totalPrice = cart.reduce((acc:number,item) => acc + item.totalPrice,0)
+
+    const totalPrice = cart.reduce((acc: number, item) => acc + item.totalPrice, 0)
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [])
-
-    
 
     return (
         <>
             <Applic applic={applic} setApplic={setApplic} />
             <div className="wrapper">
-                <Breadcrumb location={location}/>
+                <Breadcrumb location={location} />
             </div>
             <div className="cart_title_clear wrapper">
                 <div className="cart_title">корзина</div>
@@ -53,7 +50,7 @@ const Cart = () => {
                         <div className="des_cart_header_space2"></div>
                     </div>
                     <div className="des_cart_items">
-                        {cart.map((item, i)=>(
+                        {cart.map((item, i) => (
                             <div key={i} className="des_cart_item">
                                 <div className="des_cart_item_image">
                                     <div>
@@ -66,12 +63,12 @@ const Cart = () => {
                                 <div className="des_cart_item_name">{item.date}</div>
                                 <div className="des_cart_item_model">{item.model}</div>
                                 <div className="des_cart_item_number">
-                                    <button onClick={()=>dispatch(incQu(item))} className="des_cart_item_number_btn">+</button>
+                                    <button onClick={() => dispatch(incQu(item))} className="des_cart_item_number_btn">+</button>
                                     <div className="des_cart_item_number_value"><div>{item.quantity}</div></div>
-                                    <button onClick={()=>dispatch(decQu(item))} className="des_cart_item_number_btn">-</button>
+                                    <button onClick={() => dispatch(decQu(item))} className="des_cart_item_number_btn">-</button>
                                 </div>
                                 <div className="des_cart_item_price">{item.totalPrice} ₽</div>
-                                <button onClick={()=>dispatch(delItemCart(item))} className="des_cart_item_delete">
+                                <button onClick={() => dispatch(delItemCart(item))} className="des_cart_item_delete">
                                     <img src={deleteCart} alt="deleteCart" />
                                 </button>
                             </div>
@@ -87,8 +84,8 @@ const Cart = () => {
                             <div>Итого:</div>
                             <span>{totalPrice} ₽</span>
                         </div>
-                        <button onClick={()=>setApplic(!applic)} className="des_cart_total_buy">
-                            ОФОРМИТЬ ЗАКАЗ 
+                        <button onClick={() => setApplic(!applic)} className="des_cart_total_buy">
+                            ОФОРМИТЬ ЗАКАЗ
                         </button>
                     </div>
                 </div>
@@ -101,7 +98,7 @@ const Cart = () => {
                     </div>
                 </div>
                 <div className="mob_cart_items wrapper">
-                    {cart.map((item, i)=>(
+                    {cart.map((item, i) => (
                         <div key={i} className="mob_cart_item">
                             <div className="mob_cart_item_image">
                                 <img src={item.image} alt="cart_image" />
@@ -121,12 +118,12 @@ const Cart = () => {
                                     <span className='model'>Модель: </span><span> {item.model}</span>
                                 </div>
                                 <div className="mob_cart_item_number">
-                                    <button onClick={()=>dispatch(incQu(item))} className="mob_cart_item_number_btn">+</button>
+                                    <button onClick={() => dispatch(incQu(item))} className="mob_cart_item_number_btn">+</button>
                                     <div className="mob_cart_item_number_value"><div>{item.quantity}</div></div>
-                                    <button onClick={()=>dispatch(decQu(item))} className="mob_cart_item_number_btn">-</button>
+                                    <button onClick={() => dispatch(decQu(item))} className="mob_cart_item_number_btn">-</button>
                                 </div>
                             </div>
-                            <div onClick={()=>dispatch(delItemCart(item))} className="mob_cart_item_delete">
+                            <div onClick={() => dispatch(delItemCart(item))} className="mob_cart_item_delete">
                                 <img src={closebtn} alt="closeBtn" />
                             </div>
                         </div>
@@ -140,12 +137,12 @@ const Cart = () => {
                         <div className="mob_cart_buy_discount">
                             <div>Скидка:</div><div>10 %</div>
                         </div>
-                        <button onClick={()=>setApplic(!applic)} className="mob_cart_total_buy">
-                            ОФОРМИТЬ ЗАКАЗ 
+                        <button onClick={() => setApplic(!applic)} className="mob_cart_total_buy">
+                            ОФОРМИТЬ ЗАКАЗ
                         </button>
                     </div>
                 </div>
-            </div>        
+            </div>
         </>
     );
 };

@@ -1,10 +1,8 @@
 
 @media only screen  and (min-width:576px){
     .lg_pr_element{
-       
         width:230px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
-        height: 230px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
-        
+        height: 230px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/ 
     }
     .lg_pr_element_body{
         padding: 5px;
@@ -32,11 +30,11 @@
         height: 13px;
     }
     .lg_pr_element_img{
-        margin-top:5px;
-        margin-bottom:5px;
         display: flex;
         align-items:center;
         justify-content: center;
+        margin-top:5px;
+        margin-bottom:5px;
         overflow: hidden;
         position: relative;
         width: 100%;
@@ -60,7 +58,6 @@
     }
 
     .lg_pr_element_like_price{
-        
         display: flex;
         justify-content: space-between;
         align-items:flex-end
@@ -102,10 +99,8 @@
 
 @media only screen  and (min-width:767px){
     .lg_pr_element{
-       
         width:250px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
-        height: 250px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
-        
+        height: 250px;/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/  
     }
     .lg_pr_element_body{
         padding: 10px;

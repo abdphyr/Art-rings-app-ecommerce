@@ -10,20 +10,23 @@ import { RootState } from '../../app/store';
 import { ProductType } from '../product/productType';
 import { addItemRecently } from '../../features/recentlySlice';
 
+interface PrCrItemProps {
+    item: ProductType;
+    path: string;
+}
 
-const ProductCarouselItem = ({item, path}:{item:ProductType, path:string}) => {
-
+const ProductCarouselItem: React.FC<PrCrItemProps> = ({ item, path }) => {
 
     const dispatch = useDispatch()
-    const favourites = useSelector((state:RootState) => state.favourites)
-    
-    const isFavourite = favourites.some(i => i.product.name=== item.name)
+    const favourites = useSelector((state: RootState) => state.favourites)
+
+    const isFavourite = favourites.some(i => i.product.name === item.name)
 
     const handelFavourites = () => {
-        if(isFavourite){
-            dispatch(delItemFavourites({product:item, path}))
-        }else{
-            dispatch(addItemFavourites({product:item, path}))
+        if (isFavourite) {
+            dispatch(delItemFavourites({ product: item, path }))
+        } else {
+            dispatch(addItemFavourites({ product: item, path }))
         }
     }
 
@@ -33,13 +36,13 @@ const ProductCarouselItem = ({item, path}:{item:ProductType, path:string}) => {
                 <div className="pr_cr_element_date_rating">
                     <div className="pr_cr_element_date">{item.date}</div>
                     <div className="pr_cr_element_rating">
-                        {Array(item.rating).fill(item.rating).map((_,i)=>(
+                        {Array(item.rating).fill(item.rating).map((_, i) => (
                             <img key={i} src={star} alt="star" />
                         ))}
                     </div>
                 </div>
-                <Link to={`${path}${item.id}`} 
-                    onClick={() => dispatch(addItemRecently({product:item, path:path}))} 
+                <Link to={`${path}${item.id}`}
+                    onClick={() => dispatch(addItemRecently({ product: item, path: path }))}
                     className="pr_cr_element_img">
                     <img src={item.image} alt="ddede" />
                     <div className="pr_cr_element_brand">
@@ -49,16 +52,16 @@ const ProductCarouselItem = ({item, path}:{item:ProductType, path:string}) => {
                 <div className="pr_cr_element_like_price">
                     <div onClick={handelFavourites} className="pr_cr_element_like">
                         {isFavourite
-                        ?
-                        <img src={liked} alt="like" />
-                        :
-                        <img src={like} alt="like" />}
+                            ?
+                            <img src={liked} alt="like" />
+                            :
+                            <img src={like} alt="like" />}
                     </div>
                     <div className="pr_cr_element_price">
-                        <div  className={(item.discount === 0 && 'noshow')+(' pr_cr_element_price_discount')}>
+                        <div className={(item.discount === 0 && 'noshow') + (' pr_cr_element_price_discount')}>
                             {item.price}₽
                         </div>
-                        <div className={(item.discount > 0 && 'color')+(' pr_cr_element_price_current')}>
+                        <div className={(item.discount > 0 && 'color') + (' pr_cr_element_price_current')}>
                             {item.discount > 0 ? item.discount : item.price}₽
                         </div>
                     </div>

@@ -1,6 +1,6 @@
-import React,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './main.css';
-import { Routes,Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Main from './components/mainpage/Main';
 import ProductDetail from './components/productDetail/ProductDetail';
 import Catalog from './components/catalog/Catalog';
@@ -20,26 +20,25 @@ import { CartItemType } from './components/cart/cartTypes';
 import { addItemFavourites } from './features/favouriteSlice';
 import { addItemCart } from './features/cartSlice';
 import { useDispatch } from 'react-redux';
-import Loader from './components/loading/Loading';
 
-const App = () => {
+const App: React.FC = () => {
 
   const dispatch = useDispatch()
-  const localFavourites:FavouritesType[] = JSON.parse(String(localStorage.getItem('favourites')))  
-  const localCart:CartItemType[] = JSON.parse(String(localStorage.getItem('cart')))  
-  
+  const localFavourites: FavouritesType[] = JSON.parse(String(localStorage.getItem('favourites')))
+  const localCart: CartItemType[] = JSON.parse(String(localStorage.getItem('cart')))
+
   useEffect(() => {
-    if(localFavourites){
+    if (localFavourites) {
       localFavourites.forEach(item => {
-          dispatch(addItemFavourites(item))
+        dispatch(addItemFavourites(item))
       })
     }
-    if(localCart){
-      localCart.forEach(item => {                
-          dispatch(addItemCart(item))
+    if (localCart) {
+      localCart.forEach(item => {
+        dispatch(addItemCart(item))
       })
     }
-  },[])
+  }, [])
 
   return (
     <div className='app'>
@@ -54,9 +53,9 @@ const App = () => {
         <Route path='studio' element={<Studio />} />
         <Route path='contact' element={<Contact />} />
         <Route path='about' element={<About />} />
-        <Route path='deliveryandpayment' element={<DeliveryAndPayment/>} />
-        <Route path='guarantees' element={<Guarantees/>} />
-        <Route path='*' element={<NotFound/>} />
+        <Route path='deliveryandpayment' element={<DeliveryAndPayment />} />
+        <Route path='guarantees' element={<Guarantees />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

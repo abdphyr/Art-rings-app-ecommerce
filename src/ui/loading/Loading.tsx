@@ -1,7 +1,7 @@
-import React,{ useEffect } from 'react';
+import React from 'react';
 import './loading.css'
 
-const Loader = () => {
+const Loader:React.FC = () => {
     
     const isFibonna = (number:number) => {
         let a = 1;

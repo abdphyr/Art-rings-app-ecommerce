@@ -1,25 +1,18 @@
 import React,{ useState } from 'react';
 import './mobproductdetail.css';
 import { ProductDetailTypes } from './productDetailTypes';
-import heart from '../../images/heart.svg'
 import star from '../../images/star1.svg';
-import addCart from '../../images/addCart.svg';
-import WH from '../../images/WH.svg';
-import checkbox from '../../images/checkbox.svg';
 import brand from '../../images/mainlogo.png';
 import SmallProduct from '../../ui/product/SmallProduct';
 import mobileBanner from '../../images/mobileBanner.png';
 import postImage from '../../images/postImage.svg';
-import { addItemCart } from '../../features/cartSlice';
-import { useDispatch } from 'react-redux';
+import Rating from './Rating';
+import MobDetTopInfo from './ui/MobDetTopInfo';
+import Actions from './ui/Actions';
 
-const MobProductDetail = ({...props}:ProductDetailTypes) => {
+const MobProductDetail:React.FC<ProductDetailTypes> = (props) => {
     
-    const dispatch = useDispatch()
-
-    const { recentlyProducts, product, sizes, isFavourite } = props  
-    const { maleSize, setMaleSize, femaleSize, setFemaleSize } = props;
-    const { flActive, setFlActive, mlActive, setMlActive } = props;
+    const { recentlyProducts, product, isFavourite } = props  
     const { givenRating, handleRating } = props;
     const { date, rating, price, images, reviews, discount } = product   
 
@@ -43,24 +36,7 @@ const MobProductDetail = ({...props}:ProductDetailTypes) => {
 
     return (
         <>
-            <div className="mob_pr_dt_top_info">
-                <div className="mob_pr_dt_date">{date}</div>
-                <div className="mob_pr_info_top_info_row">
-                    <div className="mob_pr_dt_top_info_rate_review">
-                        <div className="mob_pr_dt_rate">
-                            {Array(rating).fill(rating).map((_,i)=>(
-                                <img key={i} src={star} alt="rasm" />
-                            ))}
-                        </div>
-                        <div className="mob_pr_dt_review_title">
-                            {reviews.length} отзыв
-                        </div>
-                    </div>
-                    {isFavourite && <div className='mob_in_favorites'>
-                        <img src={heart} alt="aa" /> в избранное
-                    </div>}
-                </div>
-            </div>
+            <MobDetTopInfo date={date} rating={rating} isFavourite={isFavourite} length={reviews.length} />
             <div className="mob_pr_dt_info">
                 <div className="mob_pr_dt_info_images">{/*IMAGES CAROUSEL */}
                     <div style={imagesBody} className="mob_pr_dt_info_images_body">
@@ -83,97 +59,7 @@ const MobProductDetail = ({...props}:ProductDetailTypes) => {
                         ))}
                     </div>
                 </div>
-                <div className="mob_pr_dt_actions">{/*ACTIONS*/}
-                    <div className="mob_pr_dt_price">
-                        <div>{discount > 0 ? discount : price} ₽</div>
-                        {discount && <span>{price} ₽</span>}
-                    </div>
-                    <div className="des_pr_dt_sizes">{/*SELECT SIZE*/}
-                        <div className="mob_pr_dt_sizes_female">
-                            <div className="mob_pr_dt_sizes_title">
-                                Размер (жен.)
-                            </div>
-                            <div className="mob_pr_dt_size" onClick={()=>setFlActive(!flActive)}>
-                                <div className={(flActive && 'active')+(" mob_pr_dt_size_btn")}>
-                                    <div className={(flActive && 'passive')+(' show_size')}>{femaleSize.title}</div>
-                                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.5" d="M15 0.766667L8.32308 8L1.53846 0.766667" stroke="black" strokeWidth="2"/>
-                                    </svg>
-                                </div>
-                                <div className={(flActive && 'active')+(" mob_pr_dt_size_items_wrapper")}>
-                                    <div className={(flActive && 'active')+(" mob_pr_dt_size_items")}>
-                                        {sizes.map(sizeItem=>(
-                                            <div key={sizeItem.size} 
-                                                onClick={()=>{
-                                                    setFemaleSize(sizeItem)
-                                                    setFlActive(false)
-                                                }}
-                                                className={(femaleSize.size===sizeItem.size && 'active')+(" mob_pr_dt_size_item")}>
-                                                {sizeItem.title}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mob_pr_dt_sizes_male">
-                            <div className="mob_pr_dt_sizes_title">
-                                Размер (муж.)
-                            </div>
-                            <div className="mob_pr_dt_size" onClick={()=>setMlActive(!mlActive)}>
-                                <div className={(mlActive && 'active')+(" mob_pr_dt_size_btn")}>
-                                    <div className={(mlActive && 'passive')+(' show_size')}>{maleSize.title}</div>
-                                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.5" d="M15 0.766667L8.32308 8L1.53846 0.766667" stroke="black" strokeWidth="2"/>
-                                    </svg>
-                                </div>
-                                <div className={(mlActive && 'active')+(" mob_pr_dt_size_items_wrapper")}>
-                                    <div className={(mlActive && 'active')+(" mob_pr_dt_size_items")}>
-                                        {sizes.map(sizeItem=>(
-                                            <div key={sizeItem.size} 
-                                                onClick={()=>{
-                                                    setMaleSize(sizeItem)
-                                                    setMlActive(false)
-                                                }}
-                                                className={(maleSize.size===sizeItem.size && 'active')+(" mob_pr_dt_size_item")}>
-                                                {sizeItem.title}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button onClick={()=>{
-                            dispatch(addItemCart(product))
-                        }} onMouseDown={()=>false} className="mob_pr_dt_cart">
-                        <img src={addCart} alt="addCart" />
-                        <div>В КОРЗИНУ</div>
-                    </button>
-                    <div className="mob_pr_dt_write">
-                        <img src={WH} alt="addCart" />
-                        <div>НАПИСАТЬ WHATSAPP</div>
-                    </div>
-                    <div className="mob_pr_dt_studio">
-                        <div className="example">
-                            <img src={checkbox} alt="image" /><span>образцы этой модели представлены в студии</span>
-                        </div>
-                        <div className="title">- Срок изготовления: 14 календарных дней</div>
-                        <div className="title">- Артикул: 987</div>
-                        <div className="title">- Материал: <span>Золото 585 пробы</span> <a>(для размеров 16 и 18)</a></div>
-                        <div className="title">- Вставки</div>
-                        <div className="line"></div>
-                    </div>
-                    <div className="mob_pr_dt_design">
-                        <h6>Внесём любые правки в дизайн:</h6>
-                        <div>- ширина, толщина, камни (добавить, убрать, размер, цвет)</div>
-                        <div>- цвет колец (одноцветные, двухцветные)</div>
-                        <div>- поверхность (глянцевая, матовая, текстурированная и т.д.)</div>
-                        <div>- можно без гравировки эмблемы (лебеди)</div>
-                        <div>- возможно изготовление в другой пробе и из других  драгоценных металлов</div>
-                        <div>- возможно нанести свою гравировку</div>
-                    </div>
-                </div>
+                <Actions {...props}/>
                 <div className="mob_pr_dt_banner">
                     <img src={mobileBanner} alt="image" />
                 </div>
@@ -239,21 +125,7 @@ const MobProductDetail = ({...props}:ProductDetailTypes) => {
                                 Ваша оценка
                             </div>
                             <div className="mob_pr_dt_rating_icons">
-                                <svg onClick={()=> handleRating(1)} width="39" height="38" viewBox="0 0 39 38" fill="#9EAFC2" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke='#9EAFC2' fill={givenRating >=1?'#9EAFC2':'none' } d="M19.4233 0L14.2829 13.9613H0L11.6498 22.5213L6.46341 37.2196L19.4233 28.0375L32.3825 37.2196L27.1961 22.5213L38.8465 13.9613H24.5637L19.4233 0Z" />
-                                </svg>
-                                <svg onClick={()=> handleRating(2)} width="39" height="38" viewBox="0 0 39 38" fill="#9EAFC2" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke='#9EAFC2' fill={givenRating>=2?'#9EAFC2':'none' } d="M19.4233 0L14.2829 13.9613H0L11.6498 22.5213L6.46341 37.2196L19.4233 28.0375L32.3825 37.2196L27.1961 22.5213L38.8465 13.9613H24.5637L19.4233 0Z" />
-                                </svg>
-                                <svg onClick={()=> handleRating(3)} width="39" height="38" viewBox="0 0 39 38" fill="#9EAFC2" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke='#9EAFC2' fill={givenRating>=3?'#9EAFC2':'none' } d="M19.4233 0L14.2829 13.9613H0L11.6498 22.5213L6.46341 37.2196L19.4233 28.0375L32.3825 37.2196L27.1961 22.5213L38.8465 13.9613H24.5637L19.4233 0Z" />
-                                </svg>
-                                <svg onClick={()=> handleRating(4)} width="39" height="38" viewBox="0 0 39 38" fill="#9EAFC2" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke='#9EAFC2' fill={givenRating>=4?'#9EAFC2':'none' } d="M19.4233 0L14.2829 13.9613H0L11.6498 22.5213L6.46341 37.2196L19.4233 28.0375L32.3825 37.2196L27.1961 22.5213L38.8465 13.9613H24.5637L19.4233 0Z" />
-                                </svg>
-                                <svg onClick={()=> handleRating(5)} width="39" height="38" viewBox="0 0 39 38" fill="#9EAFC2" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke='#9EAFC2' fill={givenRating>=5?'#9EAFC2':'none' } d="M19.4233 0L14.2829 13.9613H0L11.6498 22.5213L6.46341 37.2196L19.4233 28.0375L32.3825 37.2196L27.1961 22.5213L38.8465 13.9613H24.5637L19.4233 0Z" />
-                                </svg>
+                                <Rating handleRating={handleRating} givenRating={givenRating} />
                             </div>
                         </div>
                         <div className="mob_pr_dt_file_input">

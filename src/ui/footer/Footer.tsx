@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import footerlogo from "../../images/footerlogo.png";
 import FooterSocialIcons from "../socialicons/FooterSocialIcons";
 
-const Footer = () => {
-  
+const Footer: React.FC = () => {
+
   return (
     <div className="footer">
       <div className="wrapper">

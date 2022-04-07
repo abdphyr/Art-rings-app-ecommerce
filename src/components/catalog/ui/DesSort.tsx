@@ -3,7 +3,7 @@ import { SortProps } from '../catalogTypes';
 
 const DesSort: React.FC<SortProps> = (props) => {
     const { viewSrtOpt, setViewSrtOpt } = props
-    const { sortOptions, setSort ,sort} = props
+    const { sortOptions, setSort, sort } = props
     return (
         <div className="des_ctg_tools_sorting">
             <div className="des_sorting_title">

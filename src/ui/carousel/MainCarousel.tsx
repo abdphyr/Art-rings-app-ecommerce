@@ -4,7 +4,7 @@ import carouselimage from '../../images/carouselimage.png';
 import prevstrelka from '../../images/prevstrelka.svg';
 import nextstrelka from '../../images/nextstrelka.svg';
 
-const MainCarousel:React.FC = () => {
+const MainCarousel: React.FC = () => {
 
     const [trf, setTrf] = useState<number>(1)
     const intervalRef = useRef<number | null>(null)

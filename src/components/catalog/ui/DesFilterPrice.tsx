@@ -26,7 +26,7 @@ const DesFilterPrice: React.FC<DesFilterPriceProps> = (props) => {
 
     const { filterPriceOptions } = props
     const { filterPrice, handlePrice } = props
-    const handleSetPrice = (item:typeof filterPrice) => handlePrice(item, filterPrice)
+    const handleSetPrice = (item: typeof filterPrice) => handlePrice(item, filterPrice)
 
     return (
         <div className="des_ctg_tools_filter_price">

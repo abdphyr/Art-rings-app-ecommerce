@@ -10,7 +10,7 @@ const DesFilterInsert: React.FC<DesFilterInsertProps> = (props) => {
 
     const { filterInsert, filterInsertOptions, handleInsert } = props
     const handleSetInsert = (item: typeof filterInsert) => handleInsert(item, filterInsert);
-    
+
     return (
         <div className="des_ctg_tools_filter_insert">
             <div className="des_ctg_tools_filter_title">

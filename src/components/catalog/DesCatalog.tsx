@@ -13,7 +13,7 @@ import DesFilterInsert from './ui/DesFilterInsert';
 import DesFilterTag from './ui//DesFilterTag';
 import CatalogInfo from './ui/CatalogInfo';
 
-const DesCatalog:React.FC<CtgPropsType> = (props) => {
+const DesCatalog: React.FC<CtgPropsType> = (props) => {
 
     const { title, description, location } = props
     const { products, sortOptions, filterPriceOptions } = props
@@ -36,23 +36,23 @@ const DesCatalog:React.FC<CtgPropsType> = (props) => {
     })
     const productsLength = products.length
     const showProductProps = {
-        showing,setShowing,
-        showNumber,setShowNumber,
+        showing, setShowing,
+        showNumber, setShowNumber,
         productsLength
     }
     const desSortProps = {
         viewSrtOpt, setViewSrtOpt,
-        sortOptions, setSort ,sort
+        sortOptions, setSort, sort
     }
-    const desFilterPriceProps= {
-        filterPrice, handlePrice,filterPriceOptions
+    const desFilterPriceProps = {
+        filterPrice, handlePrice, filterPriceOptions
     }
     const desFilterInsertProps = {
-        filterInsertOptions,filterInsert,handleInsert
+        filterInsertOptions, filterInsert, handleInsert
     }
     const desFilterTagProps = {
-        filterTagOptions,filterTags,handleTag,
-        tagsShowAll,setTagsShowALL
+        filterTagOptions, filterTags, handleTag,
+        tagsShowAll, setTagsShowALL
     }
     return (
         <>
@@ -73,8 +73,8 @@ const DesCatalog:React.FC<CtgPropsType> = (props) => {
                             {/* SORT SECTION */}
                             <div className="des_ctg_tools_sort">
                                 <Animation animation={animation} setAnimation={setAnimation} />
-                                <ShowProduct {...showProductProps}/>
-                                <DesSort {...desSortProps}/>
+                                <ShowProduct {...showProductProps} />
+                                <DesSort {...desSortProps} />
                             </div>
                             {/* FILTER SECTION */}
                             <div className="des_ctg_tools_filter">

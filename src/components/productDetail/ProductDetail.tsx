@@ -12,33 +12,24 @@ import { GetCatalogDataType } from '../catalog/catalogTypes';
 import Loader from '../../ui/loading/Loading';
 
 const ProductDetail: React.FC = () => {
-
     const { category, productId } = useParams()
     const location = useLocation()
-
     let id = 1
     let catalog = ''
-
     if (productId && category) {
         id = Number.parseInt(productId)
         catalog = category
     }
-
     const recentlyProducts = useSelector((state: RootState) => state.recently)
-
     const fetchData = useGetProductsQuery(catalog)
     const data: GetCatalogDataType = fetchData.data
     const isLoading: boolean = fetchData.isLoading
-
     let product = {} as ProductType
     const pr = data?.products.find(product => product.id === id)
-
     if (pr) {
         product = pr
     }
-
     const isFavourite = useSelector((state: RootState) => state.favourites).some(item => item.product.name === product?.name)
-
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])

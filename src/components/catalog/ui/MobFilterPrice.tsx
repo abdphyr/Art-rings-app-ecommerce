@@ -30,7 +30,7 @@ const MobFilterPrice: React.FC<MobFilterPriceProps> = (props) => {
     const { filterPrice, handlePrice } = props
 
     const handleFilterPriceActive = () => setFilterPriceActive(!filterPriceActive)
-    const handleSetPrice = (item:typeof filterPrice) => handlePrice(item, filterPrice)
+    const handleSetPrice = (item: typeof filterPrice) => handlePrice(item, filterPrice)
 
     return (
         <>

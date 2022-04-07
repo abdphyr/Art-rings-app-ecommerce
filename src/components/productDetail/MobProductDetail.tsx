@@ -38,7 +38,7 @@ const MobProductDetail: React.FC<ProductDetailTypes> = (props) => {
                     ))}
                 </div>
                 <ShowMoreButton func={setShowAllProducts} bool={showAllProducts} length={recentlyProducts?.length} >
-                    ПОКАЗАТЬ ЕЩЁ  
+                    ПОКАЗАТЬ ЕЩЁ
                 </ShowMoreButton>
             </div>
         </>

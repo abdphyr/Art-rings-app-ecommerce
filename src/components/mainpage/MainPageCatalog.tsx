@@ -2,10 +2,10 @@ import React from 'react';
 import katalog1 from '../../images/katalog1.png';
 import katalog2 from '../../images/katalog2.png';
 import katalog3 from '../../images/katalog3.png';
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-const MainPageCatalog:React.FC = () => {
+const MainPageCatalog: React.FC = () => {
     return (
         <div className="mainpage_catalog">
             <div className="wrapper">

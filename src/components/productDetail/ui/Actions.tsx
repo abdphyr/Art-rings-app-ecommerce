@@ -6,6 +6,7 @@ import WH from '../../../images/WH.svg';
 import checkbox from '../../../images/checkbox.svg';
 import { addItemCart } from '../../../features/cartSlice';
 import { ProductDetailTypes } from '../productDetailTypes';
+import ActionButton from './ActionButton';
 
 const Actions: React.FC<ProductDetailTypes> = (props) => {
     const { maleSize, setMaleSize, femaleSize, setFemaleSize } = props;
@@ -14,6 +15,7 @@ const Actions: React.FC<ProductDetailTypes> = (props) => {
     const { price, discount } = product
 
     const dispatch = useDispatch()
+
     return (
         <>
             <div className="pr_dt_actions">{/*ACTIONS*/}
@@ -26,55 +28,13 @@ const Actions: React.FC<ProductDetailTypes> = (props) => {
                         <div className="pr_dt_sizes_title">
                             Размер (жен.)
                         </div>
-                        <div className="pr_dt_size" onClick={() => setFlActive(!flActive)}>
-                            <div className={(flActive && 'active') + (" pr_dt_size_btn")}>
-                                <div className={(flActive && 'passive') + (' show_size')}>{femaleSize.title}</div>
-                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.5" d="M15 0.766667L8.32308 8L1.53846 0.766667" stroke="black" strokeWidth="2" />
-                                </svg>
-                            </div>
-                            <div className={(flActive && 'active') + (" pr_dt_size_items_wrapper")}>
-                                <div className={(flActive && 'active') + (" pr_dt_size_items")}>
-                                    {sizes.map(sizeItem => (
-                                        <div key={sizeItem.size}
-                                            onClick={() => {
-                                                setFemaleSize(sizeItem)
-                                                setFlActive(false)
-                                            }}
-                                            className={(femaleSize.size === sizeItem.size && 'active') + (" pr_dt_size_item")}>
-                                            {sizeItem.title}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                        <ActionButton active={flActive} setActive={setFlActive} size={femaleSize} setSize={setFemaleSize} sizes={sizes} />
                     </div>
                     <div className="pr_dt_sizes_male">
                         <div className="pr_dt_sizes_title">
                             Размер (муж.)
                         </div>
-                        <div className="pr_dt_size" onClick={() => setMlActive(!mlActive)}>
-                            <div className={(mlActive && 'active') + (" pr_dt_size_btn")}>
-                                <div className={(mlActive && 'passive') + (' show_size')}>{maleSize.title}</div>
-                                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.5" d="M15 0.766667L8.32308 8L1.53846 0.766667" stroke="black" strokeWidth="2" />
-                                </svg>
-                            </div>
-                            <div className={(mlActive && 'active') + (" pr_dt_size_items_wrapper")}>
-                                <div className={(mlActive && 'active') + (" pr_dt_size_items")}>
-                                    {sizes.map(sizeItem => (
-                                        <div key={sizeItem.size}
-                                            onClick={() => {
-                                                setMaleSize(sizeItem)
-                                                setMlActive(false)
-                                            }}
-                                            className={(maleSize.size === sizeItem.size && 'active') + (" pr_dt_size_item")}>
-                                            {sizeItem.title}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                        <ActionButton active={mlActive} setActive={setMlActive} size={maleSize} setSize={setMaleSize} sizes={sizes} />
                     </div>
                 </div>
                 <button onClick={() => {

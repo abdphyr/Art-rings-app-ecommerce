@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CatalogInfo:React.FC = () => {
+const CatalogInfo: React.FC = () => {
     return (
         <div className="catalog_info">
             Дизайнерские обручальные кольца от производителя хороши тем, что их внешний вид и особенности оформления разнообразны и можно

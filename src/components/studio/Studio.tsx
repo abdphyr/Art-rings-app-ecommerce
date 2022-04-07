@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import carouselimage from '../../images/carouselimage.png';
 import './studio.css';
 import studio from '../../images/studio.png';
 import studio2 from '../../images/studio2.png';
 import studio3 from '../../images/studio3.png';
 
 
-const Studio = () => {
+const Studio: React.FC = () => {
 
     const [trf, setTrf] = useState<number>(1)
     const intervalRef = useRef<number | null>(null)

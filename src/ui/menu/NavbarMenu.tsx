@@ -1,7 +1,6 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import { NavbarPropsType } from "./navbarPropsType";
 import fb from "../../images/FB.svg";
 import ins from "../../images/INS.svg";
 import tg from "../../images/TG.svg";
@@ -10,15 +9,19 @@ import vk from "../../images/VK.svg";
 import navbarlogo from "../../images/mainlogo.png";
 import closebtn from "../../images/closebtnicon.svg";
 
+interface INavbar {
+  showMenu: boolean;
+  setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 
-const NavbarMenu = ({...props}:NavbarPropsType) => {  
+const NavbarMenu: React.FC<INavbar> = (props) => {
   const { showMenu, setShowMenu } = props
-  
+
   return (
-    <div className="navbar_menu" onClick={()=>setShowMenu(!showMenu)}>
+    <div className="navbar_menu" onClick={() => setShowMenu(!showMenu)}>
       <div className="wrapper">
-        <button onClick={()=>setShowMenu(!showMenu)} className="navbar_close_btn">
+        <button onClick={() => setShowMenu(!showMenu)} className="navbar_close_btn">
           <img src={closebtn} alt="close btn icon" />
         </button>
         <div className="navbar_main">

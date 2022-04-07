@@ -1,6 +1,6 @@
-import { ProductType } from "../ui/product/productType"
+import { IProduct } from "../ui/product/productType"
 
-interface Filter {
+interface IFilter {
     byPrice: {
         title: string;
         min: number;
@@ -10,7 +10,7 @@ interface Filter {
     byTags: string[];
 }
 
-const sortData = (products: ProductType[], sort: string) => {
+const sortData = (products: IProduct[], sort: string): IProduct[] => {
 
     let willSortProducts = [...products]
 
@@ -60,7 +60,7 @@ const sortData = (products: ProductType[], sort: string) => {
     return willSortProducts
 }
 
-const filterData = (sortedProducts: ProductType[], filter: Filter, search: string): ProductType[] => {
+const filterData = (sortedProducts: IProduct[], filter: IFilter, search: string): IProduct[] => {
 
     let willFilterProducts = [...sortedProducts]
     const { byPrice, byInsert, byTags } = filter
@@ -96,7 +96,7 @@ const filterData = (sortedProducts: ProductType[], filter: Filter, search: strin
 }
 
 
-export const sortFilterData = (prts: ProductType[], sort: string, filter: Filter, search: string) => {
+export const sortFilterData = (prts: IProduct[], sort: string, filter: IFilter, search: string): IProduct[] => {
     const sortedProducts = sortData(prts, sort)
     const filteredSortedProducts = filterData(sortedProducts, filter, search)
     return filteredSortedProducts

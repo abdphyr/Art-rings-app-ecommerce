@@ -15,8 +15,8 @@ import About from './components/about/About';
 import DeliveryAndPayment from './components/deliveryandpayment/DeliveryAndPayment';
 import Guarantees from './components/guarantees/Guarantees';
 import NotFound from './components/notfound/NotFound';
-import { FavouritesType } from './components/favourites/favouritesTypes';
-import { CartItemType } from './components/cart/cartTypes';
+import { IFavourite } from './components/favourites/favouritesTypes';
+import { ICartItem } from './components/cart/cartTypes';
 import { addItemFavourites } from './features/favouriteSlice';
 import { addItemCart } from './features/cartSlice';
 import { useDispatch } from 'react-redux';
@@ -24,8 +24,8 @@ import { useDispatch } from 'react-redux';
 const App: React.FC = () => {
 
   const dispatch = useDispatch()
-  const localFavourites: FavouritesType[] = JSON.parse(String(localStorage.getItem('favourites')))
-  const localCart: CartItemType[] = JSON.parse(String(localStorage.getItem('cart')))
+  const localFavourites: IFavourite[] = JSON.parse(String(localStorage.getItem('favourites')))
+  const localCart: ICartItem[] = JSON.parse(String(localStorage.getItem('cart')))
 
   useEffect(() => {
     if (localFavourites) {

@@ -1,5 +1,5 @@
 
-export interface IProduct{
+export interface IProduct {
     id: number;
     name: string;
     description: string;
@@ -8,7 +8,7 @@ export interface IProduct{
     rating: number;
     price: number;
     withStone: boolean;
-    discount:number;
+    discount: number;
     tags: string[];
     image: string;
     images: {
@@ -24,3 +24,8 @@ export interface IProduct{
     }[]
 }
 
+export interface IProductPath {
+    product: IProduct;
+    path: string;
+    animation?: boolean;
+}

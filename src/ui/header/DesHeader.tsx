@@ -6,25 +6,17 @@ import mail from "../../images/mail.svg";
 import clock from "../../images/clock.svg";
 import phone from "../../images/phone.svg";
 import searchIcon from "../../images/search.svg";
-import fb from "../../images/FB.svg";
-import ins from "../../images/INS.svg";
-import tg from "../../images/TG.svg";
-import wh from "../../images/WH.svg";
-import vk from "../../images/VK.svg";
 import cart from "../../images/cart.svg";
 import heart from "../../images/heart.svg";
 import menu from "../../images/Menu.svg";
 import logo from "../../images/mainlogo.png";
-import menuScroll from '../../images/MenuScroll.svg';
-import cartScroll from "../../images/cartScroll.svg";
-import heartScroll from "../../images/heartScroll.svg";
-import searchScroll from "../../images/searchScroll.svg";
-import { HeaderPropsType } from "./headerPropsType";
+import { Header } from "./headerPropsType";
 import { useDispatch } from "react-redux";
 import { setSearch } from '../../features/searchSlice';
 import SocialIcons from "../socialicons/SocialIcons";
+import DesScroll from "./DesScroll";
 
-const DesHeader = ({ ...props }: HeaderPropsType) => {
+const DesHeader: React.FC<Header> = (props) => {
 
   const { showMenu, setShowMenu } = props
   const { search, favouritesNumber, cartNumber } = props
@@ -64,9 +56,9 @@ const DesHeader = ({ ...props }: HeaderPropsType) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-
   return (
     <>
+      <DesScroll data={props} scroll={scroll} />
       <div className="info">
         <div className="wrapper">
           <div className="info_row">
@@ -188,43 +180,6 @@ const DesHeader = ({ ...props }: HeaderPropsType) => {
               {favouritesNumber > 0 && <div><span>{favouritesNumber}</span></div>}
               <Link to="/favourites">
                 <img src={heart} alt="heart" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* SCROLL HEADER SECTION */}
-      <div className={(scroll && 'active') + (" scroll_nav_section")}>
-        <div className="wrapper des_scroll">
-          <div className="scroll_icon_brand">
-            <button className="scroll_icon" onClick={() => setShowMenu(!showMenu)}>
-              <img src={menuScroll} alt="MenuIcon" />
-            </button>
-            <div className="scroll_brand">
-              <Link to="/">art-rings</Link>
-            </div>
-          </div>
-          <div className="scroll_search">
-            <input
-              value={search}
-              onChange={(e) => dispatch(setSearch(e.target.value))}
-              type="text"
-              placeholder="Поиск украшений" />
-            <button className="scroll_search_icon">
-              <img src={searchScroll} alt="search_icon" />
-            </button>
-          </div>
-          <div className="scroll_cart_heart">
-            <div className="scroll_cart_icon">
-              {cartNumber > 0 && <div><span>{cartNumber}</span></div>}
-              <Link to="/cart">
-                <img src={cartScroll} alt="cart" />
-              </Link>
-            </div>
-            <div className="scroll_heart_icon">
-              {favouritesNumber > 0 && <div><span>{favouritesNumber}</span></div>}
-              <Link to="/favourites">
-                <img src={heartScroll} alt="heart" />
               </Link>
             </div>
           </div>

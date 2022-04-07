@@ -1,13 +1,10 @@
 
 @media only screen  and (max-width:576px){
-    /* .sm_pr_item gaa chaqirilayotgan joyga beriladi*/
-
-    .sm_pr_element{
+     .sm_pr_element{
         margin: 10px;
         width: 155px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
         height: 280px;/*  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
     }
-    
     .sm_pr_element_date_rating_like{
         display: flex;
         justify-content: space-between;
@@ -17,7 +14,6 @@
         margin-right: 12px;
         margin-left: 10px;
     }
-
     .sm_pr_element_date{
         font-family: 'Open Sans',sans-serif;
         font-weight: 400;
@@ -93,14 +89,11 @@
 }
 
 @media only screen  and (min-width:576px){
-    /* .sm_pr_item gaa chaqirilayotgan joyga beriladi*/
-
     .sm_pr_element{
         margin: 10px;
         width: 155px;/*wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
         height: 280px;/*  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
     }
-    
     .sm_pr_element_date_rating_like{
         display: flex;
         justify-content: space-between;
@@ -127,8 +120,7 @@
         cursor: pointer;
         width: 18px;
         height: 18px;
-    }
-    
+    } 
     .sm_pr_element_img{
         width: 100%;
         display: flex;

@@ -1,5 +1,5 @@
 
-export interface ProductType{
+export interface IProduct{
     id: number;
     name: string;
     description: string;
@@ -22,10 +22,5 @@ export interface ProductType{
         date: string;
         img: string[];
     }[]
-}
-export interface ProductPropsType{
-    product:ProductType;
-    path:string;
-    animation?:boolean
 }
 

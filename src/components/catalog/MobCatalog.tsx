@@ -2,7 +2,7 @@ import './mobilecatalog.css';
 import React, { useState, useEffect } from 'react';
 import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
 import SmallProduct from '../../ui/product/SmallProduct';
-import { CtgPropsType } from './catalogTypes';
+import { ICatalog } from './catalogTypes';
 import mobileBanner from '../../images/mobileBanner.png';
 import Pagination from '../../ui/pagination/Pagination';
 import MobFilter from './ui/MobFilter';
@@ -11,7 +11,7 @@ import CatalogInfo from './ui/CatalogInfo';
 import MobFilterButton from './ui/MobFilterButton';
 import MobSortButton from './ui/MobSortButton';
 
-const MobCatalog: React.FC<CtgPropsType> = (props) => {
+const MobCatalog: React.FC<ICatalog> = (props) => {
 
     const { title, description, location } = props
     const { products, sortOptions } = props

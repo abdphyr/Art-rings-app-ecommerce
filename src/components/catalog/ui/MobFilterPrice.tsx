@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface MobFilterPriceProps {
+interface IMobFilterPrice {
     filterPriceActive: boolean;
     setFilterPriceActive: React.Dispatch<React.SetStateAction<boolean>>;
     filterPriceOptions: {
@@ -24,7 +24,7 @@ interface MobFilterPriceProps {
     }) => void
 }
 
-const MobFilterPrice: React.FC<MobFilterPriceProps> = (props) => {
+const MobFilterPrice: React.FC<IMobFilterPrice> = (props) => {
 
     const { filterPriceActive, setFilterPriceActive, filterPriceOptions } = props
     const { filterPrice, handlePrice } = props

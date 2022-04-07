@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './mobproductdetail.css';
-import { ProductDetailTypes } from './productDetailTypes';
+import { IProductDetail } from './productDetailTypes';
 import SmallProduct from '../../ui/product/SmallProduct';
 import mobileBanner from '../../images/mobileBanner.png';
 import MobDetTopInfo from './ui/MobDetTopInfo';
@@ -9,7 +9,7 @@ import MobRevDesc from './ui/MobRevDesc';
 import MobImages from './ui/MobImages';
 import ShowMoreButton from '../../ui/showmore/ShowMore';
 
-const MobProductDetail: React.FC<ProductDetailTypes> = (props) => {
+const MobProductDetail: React.FC<IProductDetail> = (props) => {
     const { recentlyProducts, product, isFavourite } = props
     const { givenRating, handleRating } = props;
     const { date, rating, images, reviews } = product

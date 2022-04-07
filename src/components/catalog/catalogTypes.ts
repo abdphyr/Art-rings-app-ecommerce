@@ -1,8 +1,8 @@
-import { ProductType } from "../../ui/product/productType";
+import { IProduct } from "../../ui/product/productType";
 import { Location } from "react-router-dom";
 
-export interface CtgPropsType {
-    products: ProductType[];
+export interface ICatalog {
+    products: IProduct[];
     title?: string;
     description?: string;
     sortOptions: string[];
@@ -48,13 +48,13 @@ export interface CtgPropsType {
     setPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export interface GetCatalogDataType {
+export interface ICatalogData {
     title: string;
     description: string;
-    products: ProductType[]
+    products: IProduct[]
 }
 
-export interface SortProps {
+export interface ISort {
     viewSrtOpt: boolean;
     setViewSrtOpt: React.Dispatch<React.SetStateAction<boolean>>;
     sortOptions: string[];

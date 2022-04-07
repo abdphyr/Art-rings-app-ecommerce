@@ -1,7 +1,7 @@
 import React from 'react';
-import { SortProps } from '../catalogTypes';
+import { ISort } from '../catalogTypes';
 
-const MobSort: React.FC<SortProps> = (props) => {
+const MobSort: React.FC<ISort> = (props) => {
     const { viewSrtOpt, setViewSrtOpt } = props
     const { sortOptions, setSort } = props
 

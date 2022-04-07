@@ -1,10 +1,10 @@
-import  { ProductType } from '../../ui/product/productType'
+import  { IProduct } from '../../ui/product/productType'
 import React from 'react';
 
-export interface ProductDetailTypes{
-    product:ProductType;
+export interface IProductDetail{
+    product:IProduct;
     recentlyProducts:{
-        product:ProductType,
+        product:IProduct,
         path:string;
     }[],
     sizes:{

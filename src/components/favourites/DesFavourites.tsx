@@ -1,11 +1,11 @@
 import React from 'react';
 import banner from '../../images/desctopVerticalBanner.png';
 import LargeProduct from '../../ui/product/LargeProduct';
-import { FavouritesProps } from './favouritesTypes';
+import { IFavourites } from './favouritesTypes';
 
 
 
-const DesFavourites: React.FC<FavouritesProps> = (props) => {
+const DesFavourites: React.FC<IFavourites> = (props) => {
     const { favourites, fv_products, fv_product } = props
     return (
         <div className="des_favourites">

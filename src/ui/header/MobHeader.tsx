@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./mobile.css";
 import searchImage from "../../images/search.svg";
-import { Header } from "./headerPropsType";
+import { IHeader } from "./headerPropsType";
 import MobSocialIcons from "../socialicons/MobSocialIcons";
 import MobScroll from "./MobScroll";
 import MobSearch from "./MobSearch";
 import MobNav from "./MobNav";
 
-const MobHeader: React.FC<Header> = (props) => {
+const MobHeader: React.FC<IHeader> = (props) => {
   const { search } = props
   const [showSearch, setShowSearch] = useState(false)
 

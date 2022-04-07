@@ -4,16 +4,16 @@ import menuScroll from '../../images/MenuScroll.svg';
 import cartScroll from "../../images/cartScroll.svg";
 import heartScroll from "../../images/heartScroll.svg";
 import searchScroll from "../../images/searchScroll.svg";
-import { Header } from './headerPropsType';
+import { IHeader } from './headerPropsType';
 import { useDispatch } from "react-redux";
 import { setSearch } from '../../features/searchSlice';
 
-interface DesScroll {
-    data: Header;
+interface IDesScroll {
+    data: IHeader;
     scroll: boolean;
 }
 
-const DesScroll: React.FC<DesScroll> = ({ data, scroll }) => {
+const DesScroll: React.FC<IDesScroll> = ({ data, scroll }) => {
     const dispatch = useDispatch()
     const { setShowMenu, showMenu, search, cartNumber, favouritesNumber } = data
     return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import SmallProduct from '../../ui/product/SmallProduct';
 import mobileBanner from '../../images/mobileBanner.png';
-import { FavouritesProps } from './favouritesTypes';
+import { IFavourites } from './favouritesTypes';
 
-const MobFavourites: React.FC<FavouritesProps> = (props) => {
+const MobFavourites: React.FC<IFavourites> = (props) => {
     const { favourites, fv_products, fv_product } = props
     return (
         <div className="mob_favourites">

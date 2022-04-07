@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface AnimationProps {
+interface IAnimation {
     animation: boolean;
     setAnimation: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Animation: React.FC<AnimationProps> = (props) => {
+const Animation: React.FC<IAnimation> = (props) => {
 
     const { animation, setAnimation } = props
     return (

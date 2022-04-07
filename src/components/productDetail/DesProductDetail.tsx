@@ -1,6 +1,6 @@
 import React from 'react';
 import './desproductdetail.css';
-import { ProductDetailTypes } from './productDetailTypes';
+import { IProductDetail } from './productDetailTypes';
 import desctopVerticalBanner from '../../images/desctopVerticalBanner.png';
 import ProductCarousel from '../../ui/carousel/ProductCarousel';
 import DesDetTopInfo from './ui/DesDetTopInfo';
@@ -8,7 +8,7 @@ import Actions from './ui/Actions';
 import DesReviewDesc from './ui/DesReviewDesc';
 import DesImages from './ui/DesImages';
 
-const DesProductDetail: React.FC<ProductDetailTypes> = (props) => {
+const DesProductDetail: React.FC<IProductDetail> = (props) => {
     const { product, recentlyProducts, isFavourite } = props;
     const { givenRating, handleRating } = props
     const { date, rating, images, reviews } = product;

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './applic.css';
 import navbarlogo from "../../images/mainlogo.png";
 import closebtn from "../../images/closebtnicon.svg";
-import { ApplicPropsType } from './cartTypes';
+import { IApplic } from './cartTypes';
 import MyInput from './MyInput';
 import MyLabel from './MyLabel';
 
-const Applic: React.FC<ApplicPropsType> = ({ applic, setApplic }) => {
+const Applic: React.FC<IApplic> = ({ applic, setApplic }) => {
 
     const [success, setSuccess] = useState(false)
     const [checkbox, setCheckbox] = useState(false)

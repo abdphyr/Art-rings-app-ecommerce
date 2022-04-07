@@ -2,14 +2,14 @@ import React from 'react';
 import heart from '../../../images/heart.svg';
 import star from '../../../images/star1.svg';
 
-interface InfoProps {
+interface IInfo {
     date: string;
     rating: number;
     isFavourite: boolean;
     length: number;
 }
 
-const MobDetTopInfo: React.FC<InfoProps> = (props) => {
+const MobDetTopInfo: React.FC<IInfo> = (props) => {
     const { date, rating, isFavourite, length } = props
     return (
         <div className="mob_pr_dt_top_info">

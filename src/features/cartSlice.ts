@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { CartItemType } from '../components/cart/cartTypes';
-import { ProductType } from '../ui/product/productType';
+import { ICartItem } from '../components/cart/cartTypes';
+import { IProduct } from '../ui/product/productType';
 
-const initialState: CartItemType[] = []
+const initialState: ICartItem[] = []
 
 export const cartSlice = createSlice({
     name: 'cartReducer',
     initialState,
     reducers: {
-        addItemCart(state, action: PayloadAction<ProductType | CartItemType>): void {
+        addItemCart(state, action: PayloadAction<IProduct | ICartItem>): void {
             const payload = action.payload
             const index = state.findIndex(item => item.name === payload.name)
 
@@ -26,14 +26,14 @@ export const cartSlice = createSlice({
             localStorage.setItem('cart', JSON.stringify(state))
         },
 
-        delItemCart(state, action: PayloadAction<ProductType>): void {
+        delItemCart(state, action: PayloadAction<IProduct>): void {
             const payload = action.payload
             const index = state.findIndex(item => item.name === payload.name)
             state.splice(index, 1)
             localStorage.setItem('cart', JSON.stringify(state))
         },
 
-        incQu(state, action: PayloadAction<ProductType>): void {
+        incQu(state, action: PayloadAction<IProduct>): void {
             const payload = action.payload
             const index = state.findIndex(item => item.name === payload.name)
             state[index].quantity++
@@ -41,7 +41,7 @@ export const cartSlice = createSlice({
             localStorage.setItem('cart', JSON.stringify(state))
         },
 
-        decQu(state, action: PayloadAction<ProductType>): void {
+        decQu(state, action: PayloadAction<IProduct>): void {
             const payload = action.payload
             const index = state.findIndex(item => item.name === payload.name)
 

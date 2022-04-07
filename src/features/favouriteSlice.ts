@@ -1,20 +1,20 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FavouritesType } from '../components/favourites/favouritesTypes';
+import { IFavourite } from '../components/favourites/favouritesTypes';
 
-const initialState: FavouritesType[] = []
+const initialState: IFavourite[] = []
 
 export const favouritesSlice = createSlice({
     name: 'favouritesReducer',
     initialState,
     reducers: {
-        addItemFavourites(state, action: PayloadAction<FavouritesType>): void {
+        addItemFavourites(state, action: PayloadAction<IFavourite>): void {
             const index = state.findIndex(item => item.product.name === action.payload.product.name)
             if (index === -1) {
                 state.unshift(action.payload)
                 localStorage.setItem('favourites', JSON.stringify(state))
             }
         },
-        delItemFavourites(state, action: PayloadAction<FavouritesType>): void {
+        delItemFavourites(state, action: PayloadAction<IFavourite>): void {
             const index = state.findIndex(item => item.product.name === action.payload.product.name)
             state.splice(index, 1)
             localStorage.setItem('favourites', JSON.stringify(state))

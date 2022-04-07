@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { CtgPropsType } from '../catalogTypes';
+import { ICatalog } from '../catalogTypes';
 import closebtnicon from '../../../images/closebtnicon.svg';
 import MobFilterPrice from './MobFilterPrice';
 import MobFilterInsert from './MobFilterInsert';
 import MobFilterTag from './MobFilterTag';
 
-interface MobFilterProps {
-    utils: CtgPropsType;
+interface IMobFilter {
+    utils: ICatalog;
     setFilterPage: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MobFilter: React.FC<MobFilterProps> = (props) => {
+const MobFilter: React.FC<IMobFilter> = (props) => {
 
     const { setFilterPage } = props
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface RatingProps{
-    handleRating(rating:number):void;
-    givenRating:number;
+interface IRating {
+    handleRating(rating: number): void;
+    givenRating: number;
 }
 
-const Rating:React.FC<RatingProps> = ({handleRating,givenRating}) => {
+const Rating: React.FC<IRating> = ({ handleRating, givenRating }) => {
     return (
         <>
             <svg onClick={() => handleRating(1)} width="39" height="38" viewBox="0 0 39 38" fill="#9EAFC2" xmlns="http://www.w3.org/2000/svg">

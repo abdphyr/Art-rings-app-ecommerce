@@ -1,7 +1,7 @@
 import React from 'react';
 import filterRadioBtn from '../../../images/filterRadioBtn.svg';
 
-interface MobFilterTagProps {
+interface IMobFilterTag {
     filterTagsActive: boolean;
     setFilterTagsActive: React.Dispatch<React.SetStateAction<boolean>>;
     filterTagOptions: string[];
@@ -9,7 +9,7 @@ interface MobFilterTagProps {
     handleTag: (item: string, filterInsert: string[]) => void;
 }
 
-const MobFilterTag: React.FC<MobFilterTagProps> = (props) => {
+const MobFilterTag: React.FC<IMobFilterTag> = (props) => {
 
     const { filterTagsActive, setFilterTagsActive } = props
     const { filterTagOptions, filterTags, handleTag } = props

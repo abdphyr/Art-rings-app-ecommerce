@@ -5,10 +5,10 @@ import addCart from '../../../images/addCart.svg';
 import WH from '../../../images/WH.svg';
 import checkbox from '../../../images/checkbox.svg';
 import { addItemCart } from '../../../features/cartSlice';
-import { ProductDetailTypes } from '../productDetailTypes';
+import { IProductDetail } from '../productDetailTypes';
 import ActionButton from './ActionButton';
 
-const Actions: React.FC<ProductDetailTypes> = (props) => {
+const Actions: React.FC<IProductDetail> = (props) => {
     const { maleSize, setMaleSize, femaleSize, setFemaleSize } = props;
     const { flActive, setFlActive, mlActive, setMlActive } = props;
     const { product, sizes } = props

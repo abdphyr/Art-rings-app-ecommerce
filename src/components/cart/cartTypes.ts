@@ -1,17 +1,17 @@
-import { ProductType } from "../../ui/product/productType";
+import { IProduct } from "../../ui/product/productType";
 
-export interface ApplicPropsType {
+export interface IApplic {
     applic: boolean;
     setApplic: React.Dispatch<React.SetStateAction<boolean>>;
 }
-export interface CartItemType extends ProductType {
+export interface ICartItem extends IProduct {
     quantity: number;
     totalPrice: number;
 }
 
-export interface CartProps{
-    cart:CartItemType[];
-    totalPrice:number;
-    applic:boolean;
-    setApplic:React.Dispatch<React.SetStateAction<boolean>>
+export interface ICart {
+    cart: ICartItem[];
+    totalPrice: number;
+    applic: boolean;
+    setApplic: React.Dispatch<React.SetStateAction<boolean>>
 }

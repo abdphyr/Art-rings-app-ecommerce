@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import brand from '../../../images/mainlogo.png';
 
-interface MobImagesProps {
+interface IMobImages {
     images: {
         id: number;
         image: string;
     }[]
 }
 
-const MobImages: React.FC<MobImagesProps> = ({ images }) => {
+const MobImages: React.FC<IMobImages> = ({ images }) => {
     const [imageView, setImageView] = useState(1)/**/
     const imagesBody: React.CSSProperties = {
         width: `${images.length * 100}%`,

@@ -3,11 +3,11 @@ import React from 'react';
 import { Location, Link } from 'react-router-dom';
 
 
-interface BreadcrumbProps {
+interface IBreadcrumb {
     location: Location;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ location }) => {
+const Breadcrumb: React.FC<IBreadcrumb> = ({ location }) => {
 
     let path: string = ''
     const route: string[] = location.pathname.split('/')

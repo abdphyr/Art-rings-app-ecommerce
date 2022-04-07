@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface DesFilterTagProps {
+interface IDesFilterTag {
     filterTagOptions: string[];
     filterTags: string[];
     handleTag: (item: string, filterInsert: string[]) => void;
@@ -8,7 +8,7 @@ interface DesFilterTagProps {
     setTagsShowALL: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const DesFilterTag: React.FC<DesFilterTagProps> = (props) => {
+const DesFilterTag: React.FC<IDesFilterTag> = (props) => {
 
     const { filterTagOptions, filterTags, handleTag, tagsShowAll, setTagsShowALL } = props
     const handleSetTag = (item: typeof filterTags[number]) => handleTag(item, filterTags);

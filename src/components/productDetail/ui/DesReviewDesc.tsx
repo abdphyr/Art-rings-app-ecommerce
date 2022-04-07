@@ -5,7 +5,7 @@ import nextstrelka from '../../../images/nextstrelka.svg';
 import inputFile from '../../../images/inputFile.svg';
 import Rating from './Rating';
 
-interface DesRevProps {
+interface IDesRev {
     reviews: {
         title: string;
         rating: number;
@@ -17,7 +17,7 @@ interface DesRevProps {
     handleRating: (rating: number) => void;
 }
 
-const DesReviewDesc: React.FC<DesRevProps> = (props) => {
+const DesReviewDesc: React.FC<IDesRev> = (props) => {
     const { reviews, givenRating, handleRating } = props
     const [dr, setDr] = useState(true);//description and reviews
     const [crPage, setCrPage] = useState(1)//carousel page

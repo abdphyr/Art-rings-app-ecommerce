@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ActionButtonProps {
+interface IActionButton {
     active: boolean;
     setActive: React.Dispatch<React.SetStateAction<boolean>>;
     setSize: React.Dispatch<React.SetStateAction<{
@@ -17,7 +17,7 @@ interface ActionButtonProps {
     }[];
 }
 
-const ActionButton: React.FC<ActionButtonProps> = (props) => {
+const ActionButton: React.FC<IActionButton> = (props) => {
 
     const { active, setActive, size, setSize, sizes } = props;
 

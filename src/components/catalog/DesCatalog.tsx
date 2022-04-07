@@ -2,7 +2,7 @@ import './desctopcatalog.css';
 import React, { useState } from 'react';
 import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
 import LargeProduct from '../../ui/product/LargeProduct';
-import { CtgPropsType } from './catalogTypes';
+import { ICatalog } from './catalogTypes';
 import banner from '../../images/desctopVerticalBanner.png'
 import Pagination from '../../ui/pagination/Pagination';
 import ShowProduct from './ui/ShowProduct';
@@ -13,7 +13,7 @@ import DesFilterInsert from './ui/DesFilterInsert';
 import DesFilterTag from './ui//DesFilterTag';
 import CatalogInfo from './ui/CatalogInfo';
 
-const DesCatalog: React.FC<CtgPropsType> = (props) => {
+const DesCatalog: React.FC<ICatalog> = (props) => {
 
     const { title, description, location } = props
     const { products, sortOptions, filterPriceOptions } = props
@@ -30,7 +30,7 @@ const DesCatalog: React.FC<CtgPropsType> = (props) => {
     const [showing, setShowing] = useState(false)
     const [tagsShowAll, setTagsShowALL] = useState(false)
 
-    const limit: CtgPropsType['products'] = []
+    const limit: ICatalog['products'] = []
     Array(showNumber).fill(showNumber).forEach((_, i) => {
         limit.push(products[i])
     })

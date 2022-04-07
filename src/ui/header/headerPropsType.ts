@@ -1,5 +1,5 @@
 
-export interface Header{
+export interface IHeader{
     showMenu: boolean;
     setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
     search:string,

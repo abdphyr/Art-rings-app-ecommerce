@@ -3,7 +3,7 @@ import star from '../../../images/star1.svg';
 import postImage from '../../../images/postImage.svg';
 import Rating from './Rating';
 
-interface MobRevProps {
+interface IMobRev {
     reviews: {
         title: string;
         rating: number;
@@ -15,7 +15,7 @@ interface MobRevProps {
     handleRating: (rating: number) => void;
 }
 
-const MobRevDesc: React.FC<MobRevProps> = (props) => {
+const MobRevDesc: React.FC<IMobRev> = (props) => {
     const { reviews, givenRating, handleRating } = props
     const [showReview, setShowReview] = useState(false)
     const limitReview = showReview ? reviews : [reviews[0], reviews[1]]

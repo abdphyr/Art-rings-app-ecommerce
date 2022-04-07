@@ -1,12 +1,12 @@
 import React from 'react';
 import filterIcon from '../../../images/filter.svg';
 
-interface MobFilterButtonProps {
+interface IMobFilterButton {
     setFilterPage: React.Dispatch<React.SetStateAction<boolean>>;
     children: React.ReactNode;
 }
 
-const MobFilterButton: React.FC<MobFilterButtonProps> = ({ setFilterPage, children }) => {
+const MobFilterButton: React.FC<IMobFilterButton> = ({ setFilterPage, children }) => {
     return (
         <div onClick={() => setFilterPage(true)} className="mob_ctg_filter_btn">
             <img src={filterIcon} alt="filterIcon" />

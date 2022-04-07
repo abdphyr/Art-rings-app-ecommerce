@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from './headerPropsType';
+import { IHeader } from './headerPropsType';
 import menu from "../../images/Menu.svg";
 import cart from "../../images/cart.svg";
 import heart from "../../images/heart.svg";
 
-interface MobNav {
-    data: Header;
+interface IMobNav {
+    data: IHeader;
     showSearch: boolean;
 }
 
-const MobNav: React.FC<MobNav> = ({ data, showSearch }) => {
+const MobNav: React.FC<IMobNav> = ({ data, showSearch }) => {
     const { showMenu, setShowMenu, cartNumber, favouritesNumber } = data
     return (
         <div className={(showSearch && 'hide') + (" mob_nav_bar")}>

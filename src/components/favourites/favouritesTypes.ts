@@ -1,13 +1,13 @@
 
-import { ProductType } from "../../ui/product/productType"
+import { IProduct } from "../../ui/product/productType"
 
-export interface FavouritesType {
+export interface IFavourite {
     path: string;
-    product: ProductType
+    product: IProduct;
 }
 
-export interface FavouritesProps {
-    favourites: FavouritesType[];
+export interface IFavourites {
+    favourites: IFavourite[];
     fv_products: React.CSSProperties;
     fv_product: React.CSSProperties;
 }

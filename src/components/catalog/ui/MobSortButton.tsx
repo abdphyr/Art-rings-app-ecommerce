@@ -1,13 +1,13 @@
 import React from 'react';
 import mobSortIcon from '../../../images/mobileSortIcon.svg';
 
-interface MobSortButton {
+interface IMobSortButton {
     viewSrtOpt: boolean;
     setViewSrtOpt: React.Dispatch<React.SetStateAction<boolean>>;
     children: React.ReactNode;
 }
 
-const MobSortButton: React.FC<MobSortButton> = ({ viewSrtOpt, setViewSrtOpt, children }) => {
+const MobSortButton: React.FC<IMobSortButton> = ({ viewSrtOpt, setViewSrtOpt, children }) => {
     return (
         <div onClick={() => {
             setViewSrtOpt(!viewSrtOpt)

@@ -4,9 +4,9 @@ import brand from '../../images/mainlogo.png';
 import cartBanner from '../../images/cartBanner.png';
 import { delItemCart, incQu, decQu } from '../../features/cartSlice';
 import { useDispatch } from 'react-redux';
-import { CartProps } from './cartTypes';
+import { ICart } from './cartTypes';
 
-const DesCart: React.FC<CartProps> = (props) => {
+const DesCart: React.FC<ICart> = (props) => {
     const { cart, totalPrice, applic, setApplic } = props
     const dispatch = useDispatch();
     return (

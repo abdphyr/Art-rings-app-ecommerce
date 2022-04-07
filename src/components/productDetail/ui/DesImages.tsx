@@ -4,14 +4,14 @@ import pr_dt_bottom from '../../../images/pr_dt_bottom.svg'
 import pr_dt_top from '../../../images/pr_dt_top.svg'
 import brand from '../../../images/mainlogo.png';
 
-interface DesImagesProps {
+interface IDesImages {
     images: {
         id: number;
         image: string;
     }[]
 }
 
-const DesImages: React.FC<DesImagesProps> = ({ images }) => {
+const DesImages: React.FC<IDesImages> = ({ images }) => {
     const [selectImg, setSelectImg] = useState(images[0])
     const [pg, setPg] = useState(0)
     const imagesStyle: React.CSSProperties = {

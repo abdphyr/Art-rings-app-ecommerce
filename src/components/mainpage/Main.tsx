@@ -4,7 +4,7 @@ import briliant from '../../images/diamond.svg';
 import MainCarousel from "../../ui/carousel/MainCarousel";
 import ProductCarousel from "../../ui/carousel/ProductCarousel";
 import SmallProduct from "../../ui/product/SmallProduct";
-import { ProductType } from "../../ui/product/productType";
+import { IProduct } from "../../ui/product/productType";
 import { useGetProductsQuery } from '../../services/productsApi'
 import MainPageCatalog from "./MainPageCatalog";
 import ShowMoreButton from "../../ui/showmore/ShowMore";
@@ -12,11 +12,11 @@ import ShowMoreButton from "../../ui/showmore/ShowMore";
 const Main: React.FC = () => {
 
     const { data } = useGetProductsQuery('new')
-    const products: ProductType[] = data?.products
+    const products = data?.products as IProduct[]
 
     const [show, setShow] = useState(false)
 
-    const limit: ProductType[] = []
+    const limit: IProduct[] = []
     if (products) {
         Array(6).fill(6).forEach((_, i) => {
             limit.push(products[i])

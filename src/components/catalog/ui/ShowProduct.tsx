@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ShowProductProps {
+interface IShowProduct {
     showing: boolean;
     setShowing: React.Dispatch<React.SetStateAction<boolean>>;
     showNumber: number;
@@ -8,7 +8,7 @@ interface ShowProductProps {
     productsLength: number
 }
 
-const ShowProduct: React.FC<ShowProductProps> = (props) => {
+const ShowProduct: React.FC<IShowProduct> = (props) => {
     const { showing, setShowing, showNumber, setShowNumber, productsLength } = props
     return (
         <div className="des_ctg_tools_sort_showing">

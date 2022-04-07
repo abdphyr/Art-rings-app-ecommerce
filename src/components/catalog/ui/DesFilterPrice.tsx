@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface DesFilterPriceProps {
+interface IDesFilterPrice {
     filterPriceOptions: {
         title: string;
         min: number;
@@ -22,7 +22,7 @@ interface DesFilterPriceProps {
     }) => void
 }
 
-const DesFilterPrice: React.FC<DesFilterPriceProps> = (props) => {
+const DesFilterPrice: React.FC<IDesFilterPrice> = (props) => {
 
     const { filterPriceOptions } = props
     const { filterPrice, handlePrice } = props

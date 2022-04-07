@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface DesFilterInsertProps {
+interface IDesFilterInsert {
     filterInsertOptions: string[];
     filterInsert: string;
     handleInsert: (item: string, filterInsert: string) => void;
 }
 
-const DesFilterInsert: React.FC<DesFilterInsertProps> = (props) => {
+const DesFilterInsert: React.FC<IDesFilterInsert> = (props) => {
 
     const { filterInsert, filterInsertOptions, handleInsert } = props
     const handleSetInsert = (item: typeof filterInsert) => handleInsert(item, filterInsert);

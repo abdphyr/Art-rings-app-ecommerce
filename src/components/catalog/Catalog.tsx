@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import DesCatalog from './DesCatalog';
 import { useParams, useLocation } from 'react-router-dom';
 import MobCatalog from './MobCatalog';
-import { GetCatalogDataType } from './catalogTypes';
+import { ICatalogData, ICatalog } from './catalogTypes';
 import { sortFilterData } from '../../utils/sortFilterProducts';
 import { RootState } from "../../app/store";
 import { useSelector } from "react-redux";
@@ -22,7 +22,7 @@ const Catalog: React.FC = () => {
     }
 
     const fetchData = useGetProductsQuery(catalog)
-    const data: GetCatalogDataType = fetchData.data
+    const data = fetchData.data as ICatalogData 
     const isLoading: boolean = fetchData.isLoading
 
     const search = useSelector((state: RootState) => state.search)
@@ -76,7 +76,7 @@ const Catalog: React.FC = () => {
     const title = isLoading ? '' : data.title
     const description = isLoading ? '' : data.description
 
-    const catalogProps = {
+    const catalogProps:ICatalog = {
         products, title, description,
         sortOptions, filterPriceOptions, filterInsertOptions,
         filterTagOptions, location,

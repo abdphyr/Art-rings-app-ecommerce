@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HeaderPropsType } from './headerPropsType';
+import { IHeader } from './headerPropsType';
 import menuScroll from '../../images/MenuScroll.svg';
 import cartScroll from "../../images/cartScroll.svg";
 import heartScroll from "../../images/heartScroll.svg";
 import searchScroll from "../../images/searchScroll.svg";
 import { setSearch } from '../../features/searchSlice';
 
-interface MobScroll {
+interface IMobScroll {
     scroll: boolean;
-    data: HeaderPropsType;
+    data: IHeader;
     setShowSearch: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const MobScroll: React.FC<MobScroll> = ({ data, scroll, setShowSearch }) => {
+const MobScroll: React.FC<IMobScroll> = ({ data, scroll, setShowSearch }) => {
     const { setShowMenu, showMenu, cartNumber, favouritesNumber } = data
     return (
         <div className={(scroll && 'scroll') + (" mob_scroll_nav_bar")}>

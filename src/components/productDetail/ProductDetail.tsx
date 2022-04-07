@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import './productdetail.css';
-import { ProductType } from '../../ui/product/productType';
 import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
 import MobProductDetail from './MobProductDetail';
 import DesProductDetail from './DesProductDetail';
 import { useGetProductsQuery } from '../../services/productsApi';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
-import { GetCatalogDataType } from '../catalog/catalogTypes';
+import { ICatalogData } from '../catalog/catalogTypes';
 import Loader from '../../ui/loading/Loading';
+import { IProduct } from '../../ui/product/productType';
 
 const ProductDetail: React.FC = () => {
     const { category, productId } = useParams()
@@ -22,14 +22,11 @@ const ProductDetail: React.FC = () => {
     }
     const recentlyProducts = useSelector((state: RootState) => state.recently)
     const fetchData = useGetProductsQuery(catalog)
-    const data: GetCatalogDataType = fetchData.data
+    const data: ICatalogData = fetchData.data
     const isLoading: boolean = fetchData.isLoading
-    let product = {} as ProductType
-    const pr = data?.products.find(product => product.id === id)
-    if (pr) {
-        product = pr
-    }
+    let product = data?.products.find(product => product.id === id) as IProduct
     const isFavourite = useSelector((state: RootState) => state.favourites).some(item => item.product.name === product?.name)
+    
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])

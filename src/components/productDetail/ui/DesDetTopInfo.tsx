@@ -2,14 +2,14 @@ import React from 'react';
 import heart from '../../../images/heart.svg';
 import star from '../../../images/star1.svg';
 
-interface InfoProps {
+interface IInfo {
     date: string;
     rating: number;
     isFavourite: boolean;
     length: number;
 }
 
-const DesDetTopInfo:React.FC<InfoProps> = (props) => {
+const DesDetTopInfo:React.FC<IInfo> = (props) => {
     const { date,rating,isFavourite,length} =props
     return (
         <div className="des_pr_dt_top_info">

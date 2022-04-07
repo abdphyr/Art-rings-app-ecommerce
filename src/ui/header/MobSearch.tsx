@@ -2,13 +2,13 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setSearch } from '../../features/searchSlice';
 
-interface MobSearch {
+interface IMobSearch {
     showSearch: boolean;
     setShowSearch: React.Dispatch<React.SetStateAction<boolean>>;
     search: string;
 }
 
-const MobSearch: React.FC<MobSearch> = (props) => {
+const MobSearch: React.FC<IMobSearch> = (props) => {
     const { showSearch, setShowSearch, search } = props
     const dispatch = useDispatch()
     return (

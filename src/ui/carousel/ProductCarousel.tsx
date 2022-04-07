@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import './productcarousel.css';
-import { ProductType } from '../product/productType';
-import { RecentlyType } from '../../features/recentlySlice';
 import prevstrelka from '../../images/prevstrelka.svg';
 import nextstrelka from '../../images/nextstrelka.svg';
 import ProductCarouselItem from './ProductCarouselItem';
+import { IProduct } from '../product/productType';
+import { IRecently } from '../../features/recentlySlice';
 
-interface ProductCarouselProps {
-    recently?: RecentlyType[];
-    products?: ProductType[];
+interface IProductCarousel {
+    recently?: IRecently[];
+    products?: IProduct[];
     path?: string;
 }
 
-const ProductCarousel: React.FC<ProductCarouselProps> = (props) => {
+const ProductCarousel: React.FC<IProductCarousel> = (props) => {
     const { products, path, recently } = props
 
     const [trs, setTrs] = useState(1)

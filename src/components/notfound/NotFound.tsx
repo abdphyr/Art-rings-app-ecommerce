@@ -2,8 +2,9 @@ import React,{ useEffect } from 'react';
 import './notfound.css';
 import notfound from '../../images/NotFound.png';
 import { Link } from 'react-router-dom';
+import styles from './notfound.module.css';
 
-const NotFound = () => {
+const NotFound:React.FC = () => {
     
     useEffect(()=>{
         window.scrollTo(0,0 )

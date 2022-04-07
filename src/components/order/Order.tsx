@@ -11,7 +11,7 @@ import inputFile from '../../images/inputFile.svg';
 import postImage from '../../images/postImage.svg';
 import banner from '../../images/desctopVerticalBanner.png';
 
-const Order = () => {
+const Order:React.FC = () => {
 
     const [page, setPage] = useState(1)
 

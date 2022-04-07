@@ -1,14 +1,14 @@
 import React from 'react';
 import './showmore.css';
 
-interface ShowMoreProps {
+interface ShowMoreButtonProps {
     func: React.Dispatch<React.SetStateAction<boolean>>;
     bool?: boolean;
     length?: number;
     children: React.ReactNode;
 }
 
-const ShowMore: React.FC<ShowMoreProps> = ({ func, bool, children, length }) => {
+const ShowMoreButton: React.FC<ShowMoreButtonProps> = ({ func, bool, children, length }) => {
     return (
         <button onClick={() => func(!bool)} className={(length === 0 && "no") + (" show_more")}>
             {children}
@@ -21,4 +21,4 @@ const ShowMore: React.FC<ShowMoreProps> = ({ func, bool, children, length }) => 
     );
 };
 
-export default ShowMore;
+export default ShowMoreButton;

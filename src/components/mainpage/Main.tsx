@@ -7,7 +7,7 @@ import SmallProduct from "../../ui/product/SmallProduct";
 import { ProductType } from "../../ui/product/productType";
 import { useGetProductsQuery } from '../../services/productsApi'
 import MainPageCatalog from "./MainPageCatalog";
-import ShowMore from "../../ui/seemore/ShowMore";
+import ShowMoreButton from "../../ui/showmore/ShowMore";
 
 const Main:React.FC = () => {
 
@@ -58,9 +58,9 @@ const Main:React.FC = () => {
                                 <SmallProduct product={product} path={'catalog/new/'} />
                             </div>
                         ))}
-                        <ShowMore func={setShow} bool={show} length={products?.length} >
+                        <ShowMoreButton func={setShow} bool={show} length={products?.length} >
                             ПОКАЗАТЬ ЕЩЁ
-                        </ShowMore>
+                        </ShowMoreButton>
                     </div>
                 </div>
             </div>

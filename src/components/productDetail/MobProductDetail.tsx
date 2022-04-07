@@ -7,7 +7,7 @@ import MobDetTopInfo from './ui/MobDetTopInfo';
 import Actions from './ui/Actions';
 import MobRevDesc from './ui/MobRevDesc';
 import MobImages from './ui/MobImages';
-import ShowMore from '../../ui/seemore/ShowMore';
+import ShowMoreButton from '../../ui/showmore/ShowMore';
 
 const MobProductDetail: React.FC<ProductDetailTypes> = (props) => {
     const { recentlyProducts, product, isFavourite } = props
@@ -37,9 +37,9 @@ const MobProductDetail: React.FC<ProductDetailTypes> = (props) => {
                         </div>
                     ))}
                 </div>
-                <ShowMore func={setShowAllProducts} bool={showAllProducts} length={recentlyProducts?.length} >
+                <ShowMoreButton func={setShowAllProducts} bool={showAllProducts} length={recentlyProducts?.length} >
                     ПОКАЗАТЬ ЕЩЁ  
-                </ShowMore>
+                </ShowMoreButton>
             </div>
         </>
     );

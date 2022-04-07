@@ -10,10 +10,11 @@ import { setSearch } from '../../features/searchSlice';
 interface IMobScroll {
     scroll: boolean;
     data: IHeader;
-    setShowSearch: React.Dispatch<React.SetStateAction<boolean>>
+    setShowSearch: React.Dispatch<React.SetStateAction<boolean>>;
+    showSearch: boolean;
 }
 
-const MobScroll: React.FC<IMobScroll> = ({ data, scroll, setShowSearch }) => {
+const MobScroll: React.FC<IMobScroll> = ({ data, scroll, showSearch, setShowSearch }) => {
     const { setShowMenu, showMenu, cartNumber, favouritesNumber } = data
     return (
         <div className={(scroll && 'scroll') + (" mob_scroll_nav_bar")}>
@@ -42,7 +43,7 @@ const MobScroll: React.FC<IMobScroll> = ({ data, scroll, setShowSearch }) => {
                         </Link>
                     </div>
                     <button onClick={() => {
-                        setShowSearch(false)
+                        setShowSearch(!showSearch)
                         setSearch('')
                     }}
                         className="mob_search_icon">

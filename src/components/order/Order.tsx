@@ -82,8 +82,8 @@ const Order: React.FC = () => {
                     {/* desctop */}
                     <div className="des_od_cr">
                         <div style={des_od_cr_items} className="des_od_cr_items">
-                            {OrderCrouselItems.map(item => (
-                                <div key={item.id} style={des_od_cr_item}>
+                            {OrderCrouselItems.map((item, i) => (
+                                <div key={i} style={des_od_cr_item}>
                                     <div className="des_od_cr_item">
                                         <img src={item.img} alt="image" />
                                         <div className="des_od_cr_item_brand">

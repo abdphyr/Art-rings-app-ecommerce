@@ -115,9 +115,9 @@ const Contact: React.FC = () => {
             <div className="contact_carousel">
                 <div style={contactCarouselItems}>
                     <div style={contactCarouselItem}>
-                        {carouselItems.map(img => (
+                        {carouselItems.map((img, i) => (
                             <div className="contact_carousel_item">
-                                <img key={img.id} src={img.img} alt="rasm" />
+                                <img key={i} src={img.img} alt="rasm" />
                             </div>
                         ))}
                     </div>

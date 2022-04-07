@@ -108,7 +108,7 @@
         margin-bottom: 40px;
     }
     .about_contact_items{
-        padding: 50px 70px;
+        padding: 30px 70px;
     }
 }
 @media only screen and (min-width:767px){
@@ -135,10 +135,10 @@
     }
     .about_contact_info{
         width: 400px;
-        height: 520px;
+        height: 500px;
     }
     .about_contact_items{
-        padding: 80px 50px;
+        padding: 50px 50px;
     }
 }
 @media only screen and (min-width:1200px){
@@ -157,6 +157,7 @@
     }
     .about_contact_info{
         width: 410px;
+        height: 570px;
     }
 }
 @media only screen and (min-width:1400px){

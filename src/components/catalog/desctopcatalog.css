@@ -133,6 +133,9 @@
     }
     .des_ctg_tools_sorting{/*sorting child*/
         width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .des_sorting_title{
         margin-right: 10px;

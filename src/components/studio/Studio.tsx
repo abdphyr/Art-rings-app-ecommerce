@@ -86,9 +86,9 @@ const Studio: React.FC = () => {
             <div className="studio_carousel">
                 <div style={studioCarouselItems}>
                     <div style={studioCarouselItem}>
-                        {carouselItems.map(img => (
+                        {carouselItems.map((img, i) => (
                             <div className="studio_carousel_item">
-                                <img key={img.id} src={img.img} alt="rasm" />
+                                <img key={i} src={img.img} alt="rasm" />
                             </div>
                         ))}
                     </div>

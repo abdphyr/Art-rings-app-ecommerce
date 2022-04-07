@@ -39,7 +39,7 @@ const MobHeader: React.FC<IHeader> = (props) => {
 
   return (
     <>
-      <MobScroll data={props} scroll={scroll} setShowSearch={setShowSearch} />
+      <MobScroll data={props} scroll={scroll} showSearch={showSearch} setShowSearch={setShowSearch} />
       <div className="mobile_icons">
         <div className="wrapper">
           <div className="mob_icons">

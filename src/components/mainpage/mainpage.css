@@ -253,6 +253,13 @@
     .mp_ct_link:hover a{
         color: #fff;
     }
+    .mp_ct_link a{
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #020F59;  
+    }
     /* NEW PRODUCTS [ppppppppppppppppppppppp*/
     .new_products{
         margin-top: 40px;/*          mmmmmmmmmmmm*/

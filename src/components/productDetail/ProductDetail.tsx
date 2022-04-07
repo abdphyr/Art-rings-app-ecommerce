@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import './productdetail.css';
-import { ProductDetailTypes } from './productDetailTypes';
 import { ProductType } from '../../ui/product/productType';
 import Breadcrumb from '../../ui/breadcrumb/Breadcrumb';
 import MobProductDetail from './MobProductDetail';
@@ -59,8 +58,8 @@ const ProductDetail: React.FC = () => {
         { title: '16.75', size: 16.75 },
     ]
 
-    const [femaleSize, setFemaleSize] = useState({ title: '14.00', size: 14 })/*ayollar*/
-    const [maleSize, setMaleSize] = useState({ title: '14.00', size: 14 })/*erkaklar*/
+    const [femaleSize, setFemaleSize] = useState({ title: '14.00', size: 14 })
+    const [maleSize, setMaleSize] = useState({ title: '14.00', size: 14 })
     const [flActive, setFlActive] = useState(false)
     const [mlActive, setMlActive] = useState(false)
     const [givenRating, setGivenRating] = useState(0)
@@ -73,7 +72,7 @@ const ProductDetail: React.FC = () => {
         }
     }
 
-    const ProductDetailProps: ProductDetailTypes = {
+    const ProductDetailProps = {
         product, recentlyProducts, sizes,
         maleSize, setMaleSize,
         femaleSize, setFemaleSize,

@@ -7,6 +7,7 @@ import SmallProduct from "../../ui/product/SmallProduct";
 import { ProductType } from "../../ui/product/productType";
 import { useGetProductsQuery } from '../../services/productsApi'
 import MainPageCatalog from "./MainPageCatalog";
+import ShowMore from "../../ui/seemore/ShowMore";
 
 const Main:React.FC = () => {
 
@@ -57,14 +58,9 @@ const Main:React.FC = () => {
                                 <SmallProduct product={product} path={'catalog/new/'} />
                             </div>
                         ))}
-                        <button onClick={()=>setShow(!show)} className="nw_prs_show_more_btn">
+                        <ShowMore func={setShow} bool={show} length={products?.length} >
                             ПОКАЗАТЬ ЕЩЁ
-                            <span className={(show && 'active')+(" nw_prs_show_more_btn_icon")}>
-                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 0.8L7.27692 7L1.46154 0.8" stroke="#020F59" strokeWidth="2"/>
-                                </svg>
-                            </span>
-                        </button>
+                        </ShowMore>
                     </div>
                 </div>
             </div>

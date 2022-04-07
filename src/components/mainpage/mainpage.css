@@ -144,27 +144,6 @@
         justify-content: center;/*cccccccccccccccccccccccccccccccccccccc*/
         align-items:center;/*ccccccccccccccccccccccccccccccccccccccccccc*/
     }
-
-    .nw_prs_show_more_btn{
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 19px;
-        color: #020F59;
-        background: #F8F9FD;
-        height: 60px;
-        width: 100%;
-        border:none;
-        text-align: center;
-        vertical-align: middle;
-    }
-    .nw_prs_show_more_btn_icon svg{
-        margin-left: 8px;
-        transition:all 0.5s ease;
-    }
-    .nw_prs_show_more_btn_icon.active svg{
-        transform: rotate(-180deg);
-    }
 }
 @media only screen  and (min-width:576px){
     .mainpage{

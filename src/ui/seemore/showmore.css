@@ -1,0 +1,23 @@
+.show_more{
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #020F59;
+    background: #F8F9FD;
+    height: 60px;
+    width: 100%;
+    border:none;
+    text-align: center;
+    vertical-align: middle;
+}
+.show_more.no{
+    display: none;
+}
+.show_more_icon svg{
+    margin-left: 8px;
+    transition:all 0.5s ease;
+}
+.show_more_icon.active svg{
+    transform: rotate(-180deg);
+}

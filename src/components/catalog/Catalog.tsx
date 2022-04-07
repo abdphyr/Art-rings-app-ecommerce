@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import DesCatalog from './DesCatalog';
 import { useParams, useLocation } from 'react-router-dom';
 import MobCatalog from './MobCatalog';
-import { CtgPropsType, GetCatalogDataType } from './catalogTypes';
+import { GetCatalogDataType } from './catalogTypes';
 import { sortFilterData } from '../../utils/sortFilterProducts';
 import { RootState } from "../../app/store";
 import { useSelector } from "react-redux";
@@ -76,7 +76,7 @@ const Catalog: React.FC = () => {
     const title = isLoading ? '' : data.title
     const description = isLoading ? '' : data.description
 
-    const catalogProps: CtgPropsType = {
+    const catalogProps = {
         products, title, description,
         sortOptions, filterPriceOptions, filterInsertOptions,
         filterTagOptions, location,
